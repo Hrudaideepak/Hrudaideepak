@@ -1,15 +1,15 @@
 # 🌌 Welcome to Hrudaideepak's GitHub Profile!
 
 <div align="center">
-  <img src="https://readme-typing-svg.demolab.com?font=Orbitron&weight=700&size=28&pause=1000&color=E21227&center=true&vCenter=true&width=600&lines=Hi+there!+I'm+Deepak;Full+Stack+%26+Mobile+Engineer;Building+Next-Gen+OTT+Streaming;Creating+Premium+User+Experiences" alt="Typing SVG" />
+  <img src="https://readme-typing-svg.demolab.com?font=Orbitron&weight=700&size=28&pause=1000&color=E21227&center=true&vCenter=true&width=600&lines=Hi+there!+I'm+Deepak;Full+Stack+%26+Mobile+Engineer;AI+Integrations+Specialist;Building+Premium+Experiences" alt="Typing SVG" />
 </div>
 
 <p align="center">
   <a href="https://github.com/Hrudaideepak">
     <img src="https://img.shields.io/github/followers/Hrudaideepak?label=Followers&style=for-the-badge&color=E21227&labelColor=1c1c1c" alt="Followers" />
   </a>
-  <a href="https://linkedin.com/in/YOUR_LINKEDIN_HERE">
-    <img src="https://img.shields.io/badge/LinkedIn-Connect-blue?style=for-the-badge&logo=linkedin&color=0A66C2&labelColor=1c1c1c" alt="LinkedIn" />
+  <a href="mailto:your_email@example.com">
+    <img src="https://img.shields.io/badge/Email-Contact_Me-red?style=for-the-badge&logo=gmail&logoColor=white&color=E21227&labelColor=1c1c1c" alt="Email" />
   </a>
 </p>
 
@@ -30,15 +30,57 @@ I build scalable, modern applications across mobile, web, and backend architectu
       <img src="https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white" alt="Tailwind" />
     </td>
     <td valign="top" width="50%">
-      <h3>⚙️ Backend & Database</h3>
+      <h3>⚙️ Backend, Database & AI</h3>
       <img src="https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white" alt="Node.js" />
       <img src="https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white" alt="TypeScript" />
+      <img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white" alt="Python" />
       <img src="https://img.shields.io/badge/Prisma-2D3748?style=for-the-badge&logo=prisma&logoColor=white" alt="Prisma" />
-      <img src="https://img.shields.io/badge/PostgreSQL-316192?style=for-the-badge&logo=postgresql&logoColor=white" alt="PostgreSQL" />
       <img src="https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white" alt="Docker" />
     </td>
   </tr>
 </table>
+
+---
+
+## 🤖 Featured AI Projects
+
+### 🧠 [AI Career Mentor](https://github.com/Hrudaideepak/-AI-Career-Mentor---Your-Personal-Career-Guidance-Platform--openai) (Available in [OpenAI](https://github.com/Hrudaideepak/-AI-Career-Mentor---Your-Personal-Career-Guidance-Platform--openai) & [Gemini](https://github.com/Hrudaideepak/-AI-Career-Mentor---Your-Personal-Career-Guidance-Platform--gemini) Engines)
+A full-stack career assistant with persistent session memory that provides tailored guidance based on user resumes, career history, and interactive conversations.
+* **Tech Stack:** Python, LangChain, LLM APIs.
+
+### 🔥 [Roast My Code](https://github.com/Hrudaideepak/Roast_my_code)
+A developer utility that reviews code repositories and generates humorous, sarcastic critiques and actionable improvements using LLMs.
+* **Tech Stack:** TypeScript, Node.js, AI API Integration.
+
+---
+
+## 📱 Featured Applications
+
+### 🌌 [VANIX — Premium OTT Streaming Platform](https://github.com/Hrudaideepak/vanix-new)
+A high-performance video streaming application matching Netflix-grade functionalities.
+*   **📱 Mobile:** Gorgeous Flutter application using **Riverpod** for robust state management.
+*   **💻 Admin Dashboard:** Created with **Next.js** for catalog control and telemetry insights.
+*   **⚙️ Backend:** Powered by **Node.js (TypeScript)**, **Prisma ORM**, and **PostgreSQL** in **Docker** containers, with CI/CD automated via **GitHub Actions**.
+
+### 📺 [Sync Tube](https://github.com/Hrudaideepak/sync-tube)
+A real-time collaborative platform allowing users to synchronize video playback and watch content together seamlessly.
+* **Tech Stack:** JavaScript, WebSocket, HTML5.
+
+### 🧙‍♂️ [Wardrobe Wizard](https://github.com/Hrudaideepak/WardrobeWizard)
+A smart closet organizer helper designed to catalog clothing and suggest outfit combinations based on weather data.
+* **Tech Stack:** Python, SQLite.
+
+---
+
+## ✨ Creative & Stress-Relief Web
+
+### 🍮 [Squishy Jelly](https://github.com/Hrudaideepak/squishyjelly)
+An interactive physics-based stress relief jelly toy running directly in the browser to help you unwind.
+* **Tech Stack:** HTML5, Canvas, JavaScript Physics.
+
+### 💬 [Random Aesthetic Quote Generator](https://github.com/Hrudaideepak/random_asthetic_Quote_generator)
+A clean, visually pleasing web application that pairs deep quotes with curated gradient aesthetics.
+* **Tech Stack:** JavaScript, CSS.
 
 ---
 
@@ -74,18 +116,6 @@ I build scalable, modern applications across mobile, web, and backend architectu
     <img src="https://github-profile-trophy.vercel.app/?username=Hrudaideepak&theme=tokyonight&no-bg=true&no-frame=true&margin-w=15" alt="GitHub Trophies" />
   </a>
 </p>
-
----
-
-## 🚀 Featured Project
-
-### 🌌 [VANIX — Premium OTT Streaming Platform](https://github.com/Hrudaideepak/vanix-new)
-An end-to-end, high-performance video streaming platform built to replicate Netflix-grade features.
-
-*   **📱 Mobile Client:** A gorgeous, fully-responsive Flutter application utilizing **Riverpod** for robust state management and customized caching.
-*   **💻 Admin Dashboard:** Created with **Next.js** for catalog management, user profiling, and dynamic analytics.
-*   **⚙️ Backend Engine:** Powered by **Node.js (TypeScript)**, **Prisma ORM**, and **PostgreSQL** to handle low-latency API interactions.
-*   **⛓️ DevOps & CI/CD:** Orchestrated using **Docker Containers** and **GitHub Actions** workflows with direct push integration to GitHub Container Registry (GHCR).
 
 ---
 
