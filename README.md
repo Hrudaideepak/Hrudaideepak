@@ -58,16 +58,6 @@ A developer utility that reviews code repositories and generates humorous, sarca
 
 ## 📱 Featured Applications
 
-### 🌌 [VANIX — Premium OTT Streaming Platform](https://github.com/Hrudaideepak/vanix-new)
-A high-performance video streaming application matching Netflix-grade functionalities.
-*   **📱 Mobile:** Gorgeous Flutter application using **Riverpod** for robust state management.
-*   **💻 Admin Dashboard:** Created with **Next.js** for catalog control and telemetry insights.
-*   **⚙️ Backend:** Powered by **Node.js (TypeScript)**, **Prisma ORM**, and **PostgreSQL** in **Docker** containers, with CI/CD automated via **GitHub Actions**.
-
-### 📺 [Sync Tube](https://github.com/Hrudaideepak/sync-tube)
-A real-time collaborative platform allowing users to synchronize video playback and watch content together seamlessly.
-* **Tech Stack:** JavaScript, WebSocket, HTML5.
-
 ### 🧙‍♂️ [Wardrobe Wizard](https://github.com/Hrudaideepak/WardrobeWizard)
 A smart closet organizer helper designed to catalog clothing and suggest outfit combinations based on weather data.
 * **Tech Stack:** Python, SQLite.
