@@ -1,0 +1,1619 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Hrudai Deepak | AI/ML Engineer & Full-Stack Developer</title>
+<meta name="description" content="Portfolio of Bonagiri Naga Venkata Hrudai Deepak — AI/ML Engineer and Full-Stack Developer specialising in RAG pipelines, LLM orchestration, and modern web apps."/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+tailwind.config = {
+  theme: {
+    extend: {
+      colors: {
+        "surface":             "#fbf8ff",
+        "surface-dim":         "#dad9e3",
+        "surface-bright":      "#fbf8ff",
+        "surface-low":         "#f4f2fd",
+        "surface-container":   "#eeedf7",
+        "surface-high":        "#e8e7f1",
+        "surface-highest":     "#e3e1ec",
+        "on-surface":          "#1a1b22",
+        "on-surface-var":      "#494553",
+        "inv-surface":         "#2f3038",
+        "inv-on-surface":      "#f1effa",
+        "outline":             "#7a7485",
+        "outline-var":         "#cbc3d5",
+        "primary":             "#6844c7",
+        "on-primary":          "#ffffff",
+        "primary-container":   "#9d7bff",
+        "on-primary-container":"#320085",
+        "inv-primary":         "#cebdff",
+        "secondary":           "#635b6e",
+        "on-secondary":        "#ffffff",
+        "sec-container":       "#e9def5",
+        "on-sec-container":    "#696174",
+        "tertiary":            "#6f46b9",
+        "on-tertiary":         "#ffffff",
+        "tert-container":      "#a47bf2",
+        "on-tert-container":   "#38007e",
+        "primary-fixed":       "#e8ddff",
+        "primary-fixed-dim":   "#cebdff",
+        "on-primary-fixed":    "#21005e",
+        "on-pf-var":           "#5028ae",
+        "background":          "#fbf8ff",
+        "on-background":       "#1a1b22",
+        "surface-variant":     "#e3e1ec",
+      },
+      fontFamily: {
+        "serif":  ['"EB Garamond"', 'Georgia', 'serif'],
+        "sans":   ['"Space Grotesk"', 'sans-serif'],
+      },
+      borderRadius: {
+        "DEFAULT": "0.5rem",
+        "md":  "0.75rem",
+        "lg":  "1rem",
+        "xl":  "1.5rem",
+        "full":"9999px",
+      }
+    }
+  }
+}
+</script>
+<style>
+  :root {
+    --primary:          #6844c7;
+    --primary-container:#9d7bff;
+    --primary-fixed:    #e8ddff;
+    --primary-fixed-dim:#cebdff;
+    --surface:          #fbf8ff;
+    --surface-low:      #f4f2fd;
+    --on-surface:       #1a1b22;
+    --secondary:        #635b6e;
+    --sec-container:    #e9def5;
+    --outline:          #7a7485;
+    --outline-var:      #cbc3d5;
+  }
+
+  * { scroll-behavior: smooth; }
+
+  body {
+    background-color: var(--surface);
+    color: var(--on-surface);
+    font-family: 'Space Grotesk', sans-serif;
+    overflow-x: hidden;
+  }
+
+  h1,h2,h3,h4,.font-serif { font-family: 'EB Garamond', Georgia, serif; }
+
+  /* ── GLASS CARD ── */
+  .glass {
+    background: rgba(255,255,255,0.75);
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+    border: 1px solid rgba(155,123,255,0.18);
+    box-shadow: 0 8px 32px -8px rgba(104,68,199,0.12);
+    transition: transform .4s cubic-bezier(.23,1,.32,1), box-shadow .4s ease;
+  }
+  .glass:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 20px 50px -12px rgba(104,68,199,0.18);
+  }
+
+  /* ── AMBIENT GLOW ── */
+  .glow { box-shadow: 0 40px 100px -20px rgba(104,68,199,0.13); }
+
+  /* ── GRADIENT TEXT ── */
+  .grad-text {
+    background: linear-gradient(135deg, #6844c7 0%, #9d7bff 60%, #a47bf2 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  /* ── PRIMARY BUTTON ── */
+  .btn-primary {
+    background: linear-gradient(135deg, #6844c7 0%, #9d7bff 100%);
+    color: #fff;
+    border-radius: 9999px;
+    transition: transform .3s cubic-bezier(.34,1.56,.64,1), box-shadow .3s ease;
+  }
+  .btn-primary:hover {
+    transform: scale(1.04);
+    box-shadow: 0 10px 28px -4px rgba(104,68,199,0.4);
+  }
+
+  /* ── GHOST BUTTON ── */
+  .btn-ghost {
+    border: 1px solid rgba(104,68,199,0.35);
+    color: #6844c7;
+    border-radius: 9999px;
+    transition: all .3s ease;
+  }
+  .btn-ghost:hover { background: rgba(104,68,199,0.07); }
+
+  /* ── MESH BG ── */
+  body::before {
+    content:'';
+    position:fixed;
+    inset:0;
+    z-index:-2;
+    background:
+      radial-gradient(ellipse 70% 60% at 10% 5%,  rgba(157,123,255,0.18) 0%, transparent 60%),
+      radial-gradient(ellipse 60% 50% at 90% 10%,  rgba(164,123,242,0.14) 0%, transparent 60%),
+      radial-gradient(ellipse 50% 50% at 50% 100%, rgba(104,68,199,0.09) 0%, transparent 60%),
+      #fbf8ff;
+    pointer-events:none;
+  }
+
+  /* ── CODE SNIPPET ── */
+  .code-fade {
+    mask-image: linear-gradient(to bottom, black 50%, transparent 100%);
+    -webkit-mask-image: linear-gradient(to bottom, black 50%, transparent 100%);
+  }
+
+  /* ── FLOAT ANIM ── */
+  @keyframes float { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-12px)} }
+  .float { animation: float 6s ease-in-out infinite; }
+
+  /* ── REVEAL ── */
+  .reveal { opacity:0; transform:translateY(28px); transition: opacity .7s ease-out, transform .7s ease-out; }
+  .reveal.visible { opacity:1; transform:translateY(0); }
+
+  /* ── STAGGER ── */
+  .stagger { opacity:0; transform:translateY(20px); animation: fadeUp .8s cubic-bezier(.16,1,.3,1) forwards; }
+  @keyframes fadeUp { to {opacity:1;transform:translateY(0);} }
+
+  /* ── NAV ── */
+  nav.slim { padding-top:.5rem!important; padding-bottom:.5rem!important; }
+
+  /* ── PROGRESS BAR ── */
+  .pbar { width:0%; transition: width 1.5s cubic-bezier(.16,1,.3,1); }
+
+  /* ── RADIAL SEP ── */
+  .rsep { height:1px; background: radial-gradient(circle, rgba(104,68,199,0.25) 0%, transparent 100%); }
+
+  /* ── SKILL BADGE ── */
+  .badge {
+    background: rgba(232,221,255,0.6);
+    color: #5028ae;
+    border: 1px solid rgba(157,123,255,0.25);
+    border-radius: 9999px;
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.07em;
+    text-transform: uppercase;
+    transition: all .3s ease;
+  }
+  .badge:hover { background: #6844c7; color:#fff; transform:translateY(-2px); }
+
+  /* ── INPUT ── */
+  .field {
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid var(--outline-var);
+    width:100%; padding:.75rem 0;
+    color: var(--on-surface);
+    font-family: 'Space Grotesk',sans-serif;
+    font-size:16px;
+    transition: border-color .3s ease, box-shadow .3s ease;
+    outline:none;
+  }
+  .field:focus { border-color: var(--primary); box-shadow: 0 2px 12px rgba(104,68,199,0.15); }
+
+  /* ── FLOATING LABEL ── */
+  .flabel {
+    position:absolute; left:0; top:.75rem;
+    color: rgba(99,91,110,0.65);
+    font-size:16px;
+    transition: all .25s ease;
+    pointer-events:none;
+  }
+  input:focus~.flabel, input:not(:placeholder-shown)~.flabel,
+  textarea:focus~.flabel, textarea:not(:placeholder-shown)~.flabel,
+  select:focus~.flabel {
+    top:-1rem; font-size:11px; color: var(--primary); letter-spacing:.06em; text-transform:uppercase;
+  }
+
+  /* ── MODAL OVERLAY ── */
+  #insight-modal {
+    display:none;
+    position:fixed; inset:0; z-index:9999;
+    background: rgba(30,25,50,0.55);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    align-items:center; justify-content:center;
+  }
+  #insight-modal.open { display:flex; }
+
+  #insight-card {
+    background: rgba(255,255,255,0.92);
+    backdrop-filter: blur(32px);
+    -webkit-backdrop-filter: blur(32px);
+    border: 1px solid rgba(157,123,255,0.3);
+    box-shadow: 0 32px 80px -16px rgba(104,68,199,0.25);
+    border-radius: 1.5rem;
+    width: min(680px, 92vw);
+    max-height: 85vh;
+    overflow-y: auto;
+    padding: 2.5rem;
+    animation: modalIn .4s cubic-bezier(.16,1,.3,1);
+  }
+  @keyframes modalIn { from {opacity:0;transform:scale(.92) translateY(20px)} to {opacity:1;transform:none} }
+
+  .modal-tag { display:inline-block; padding:.25rem .75rem; border-radius:9999px; background:#e8ddff; color:#5028ae; font-size:11px; font-weight:600; letter-spacing:.08em; text-transform:uppercase; }
+
+  /* ── TYPING CURSOR ── */
+  .cursor::after { content:'|'; animation: blink 1s step-end infinite; }
+  @keyframes blink { 0%,100%{opacity:1} 50%{opacity:0} }
+
+  /* ── PURPLE SECTION BG ── */
+  .purple-section {
+    background: linear-gradient(135deg, rgba(104,68,199,0.06) 0%, rgba(157,123,255,0.04) 100%);
+  }
+
+  /* ── STAT CARD ── */
+  .stat-card {
+    background: linear-gradient(135deg, rgba(104,68,199,0.12) 0%, rgba(157,123,255,0.07) 100%);
+    border: 1px solid rgba(157,123,255,0.25);
+  }
+
+  /* material icons */
+  .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24; }
+
+  /* scrollbar */
+  #insight-card::-webkit-scrollbar { width:5px; }
+  #insight-card::-webkit-scrollbar-track { background: rgba(157,123,255,0.1); }
+  #insight-card::-webkit-scrollbar-thumb { background: rgba(104,68,199,0.4); border-radius:9999px; }
+
+  /* ── SECRET MODAL ── */
+  .secret-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(26, 27, 34, 0.95);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10000;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.4s ease;
+  }
+  .secret-modal.open {
+    opacity: 1 !important;
+    pointer-events: all !important;
+  }
+  .secret-modal-content {
+    background-color: #fbf8ff;
+    border: 2px solid #6844c7;
+    border-radius: 1.5rem;
+    padding: 2.5rem;
+    width: 90%;
+    max-width: 450px;
+    text-align: center;
+    position: relative;
+    box-shadow: 0 0 30px rgba(104, 68, 199, 0.3);
+    transform: scale(0.9);
+    transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+  .secret-modal.open .secret-modal-content {
+    transform: scale(1);
+  }
+  .close-secret {
+    position: absolute;
+    top: 1rem;
+    right: 1.5rem;
+    font-size: 2rem;
+    color: #cbc3d5;
+    cursor: pointer;
+    transition: color 0.2s;
+  }
+  .close-secret:hover {
+    color: #6844c7;
+  }
+  .secret-modal h3 {
+    font-family: 'EB Garamond', Georgia, serif;
+    font-size: 1.8rem;
+    color: #1a1b22;
+    margin-bottom: 1.5rem;
+  }
+  .secret-img-wrapper {
+    border-radius: 0.75rem;
+    overflow: hidden;
+    border: 1px solid rgba(157,123,255,0.2);
+    aspect-ratio: 3 / 4;
+    max-height: 50vh;
+  }
+  .secret-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+</style>
+</head>
+<body class="text-on-surface">
+
+<!-- ════════════════════════════ NAV ════════════════════════════ -->
+<nav id="main-nav" class="fixed top-0 left-0 w-full z-50 flex justify-between items-center px-8 md:px-16 py-4 bg-surface/80 backdrop-blur-xl border-b border-primary-fixed/40 shadow-sm transition-all duration-300">
+  <a href="#hero" class="font-serif text-2xl font-medium text-primary">Hrudai Deepak</a>
+  <div class="hidden md:flex gap-8 items-center font-sans">
+    <a class="nav-link text-sm font-medium text-on-surface-var hover:text-primary transition-colors pb-0.5" href="#work">Work</a>
+    <a class="nav-link text-sm font-medium text-on-surface-var hover:text-primary transition-colors pb-0.5" href="#insights">Insights</a>
+    <a class="nav-link text-sm font-medium text-on-surface-var hover:text-primary transition-colors pb-0.5" href="#stack">Stack</a>
+    <a class="nav-link text-sm font-medium text-on-surface-var hover:text-primary transition-colors pb-0.5" href="#certifications">Certs</a>
+    <a class="nav-link text-sm font-medium text-on-surface-var hover:text-primary transition-colors pb-0.5" href="#connect">Connect</a>
+  </div>
+  <a href="#connect" class="btn-primary px-6 py-2.5 text-xs font-sans font-semibold tracking-widest uppercase shadow-lg">Hire Me</a>
+</nav>
+
+<!-- ════════════════════════════ HERO ════════════════════════════ -->
+<section id="hero" class="relative px-8 md:px-16 pt-40 pb-32 overflow-hidden">
+  <!-- BG accent blobs -->
+  <div class="absolute -top-40 -right-40 w-[600px] h-[600px] rounded-full pointer-events-none" style="background:radial-gradient(circle,rgba(157,123,255,0.22) 0%,transparent 70%)"></div>
+  <div class="absolute -bottom-40 -left-40 w-[400px] h-[400px] rounded-full pointer-events-none" style="background:radial-gradient(circle,rgba(104,68,199,0.13) 0%,transparent 70%)"></div>
+
+  <div class="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-8 items-center min-h-[640px]">
+    <!-- LEFT -->
+    <div class="lg:col-span-7 stagger" style="animation-delay:.05s">
+      <span class="inline-block font-sans text-xs font-semibold tracking-[.3em] uppercase text-primary mb-6 px-3 py-1.5 rounded-full" style="background:rgba(104,68,199,0.1)">
+        AI/ML Engineer &nbsp;·&nbsp; Full-Stack Developer &nbsp;·&nbsp; Generative AI Specialist
+      </span>
+      <h1 class="font-serif text-5xl md:text-6xl mb-8 leading-[1.08] tracking-[-0.02em]">
+        Code Meets Clarity:<br/>
+        <em class="grad-text not-italic">Building Intelligent</em><br/>
+        AI-Powered Products.
+      </h1>
+      <p class="font-sans text-lg text-on-surface-var leading-relaxed max-w-xl mb-12">
+        CS undergraduate at AITS Hyderabad specialising in AI/ML — building production-grade RAG pipelines, LLM orchestration systems, and full-stack web apps powered by Gemini &amp; GPT-4o.
+      </p>
+      <div class="flex flex-wrap gap-4">
+        <a href="#work" class="btn-primary flex items-center gap-2 px-9 py-4 font-sans text-xs font-semibold tracking-widest uppercase shadow-xl shadow-primary/25">
+          View My Work <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+        </a>
+        <a href="resume.html" target="_blank" class="btn-ghost flex items-center gap-2 px-9 py-4 font-sans text-xs font-semibold tracking-widest uppercase">
+          <span class="material-symbols-outlined text-[18px]">description</span> View Resume
+        </a>
+      </div>
+    </div>
+
+    <!-- RIGHT — floating code card -->
+    <div class="lg:col-span-5 hidden lg:flex justify-center">
+      <div class="glass glow rounded-xl p-8 float w-full max-w-[340px]" style="border-color:rgba(157,123,255,0.3)">
+        <!-- Traffic lights -->
+        <div class="flex gap-2 mb-6">
+          <div class="w-3 h-3 rounded-full" style="background:#e8ddff"></div>
+          <div class="w-3 h-3 rounded-full" style="background:#9d7bff"></div>
+          <div class="w-3 h-3 rounded-full" style="background:#6844c7"></div>
+        </div>
+        <div class="font-mono text-sm leading-7 code-fade" style="color:#5028ae">
+          <p><span style="color:#9d7bff">const</span> hrudai = {</p>
+          <p class="pl-5">role: <span style="color:#6844c7">"Full-Stack Dev"</span>,</p>
+          <p class="pl-5">passion: <span style="color:#6844c7">"AI &amp; Apps"</span>,</p>
+          <p class="pl-5">stack: [<span style="color:#a47bf2">"React"</span>, <span style="color:#a47bf2">"Node"</span>,</p>
+          <p class="pl-10 text-xs"><span style="color:#a47bf2">"Python"</span>, <span style="color:#a47bf2">"Firebase"</span>],</p>
+          <p class="pl-5">build: () =&gt; {</p>
+          <p class="pl-10" style="color:#6844c7">create(ideas)</p>
+          <p class="pl-10">.then(ship);</p>
+          <p class="pl-5">}</p>
+          <p>};</p>
+          <p class="mt-4 text-xs" style="color:rgba(104,68,199,0.35)">// currently building something amazing...</p>
+        </div>
+        <!-- Mini bar chart -->
+        <div class="mt-7 pt-6 border-t flex items-end gap-1 h-16" style="border-color:rgba(157,123,255,0.2)">
+          <div class="flex-1 rounded-t-sm" style="height:40%;background:rgba(157,123,255,0.35)"></div>
+          <div class="flex-1 rounded-t-sm" style="height:72%;background:#9d7bff"></div>
+          <div class="flex-1 rounded-t-sm" style="height:50%;background:rgba(157,123,255,0.35)"></div>
+          <div class="flex-1 rounded-t-sm" style="height:30%;background:rgba(157,123,255,0.2)"></div>
+          <div class="flex-1 rounded-t-sm" style="height:95%;background:#6844c7"></div>
+          <div class="flex-1 rounded-t-sm" style="height:60%;background:rgba(157,123,255,0.35)"></div>
+          <div class="flex-1 rounded-t-sm" style="height:48%;background:rgba(157,123,255,0.25)"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════════ CAPABILITIES ════════════════════════════ -->
+<section class="purple-section px-8 md:px-16 py-28 reveal">
+  <div class="max-w-6xl mx-auto">
+    <div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-4">
+      <div class="max-w-2xl">
+        <span class="font-sans text-xs font-semibold tracking-[.3em] uppercase text-primary block mb-4">Capabilities</span>
+        <h2 class="font-serif text-4xl md:text-5xl leading-tight">Engineering meets AI — the full stack.</h2>
+      </div>
+      <p class="font-sans text-base text-on-surface-var italic">Turning the abstract into the actionable.</p>
+    </div>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+      <!-- Engineering -->
+      <div class="glass rounded-xl p-10">
+        <div class="flex items-center gap-4 mb-6">
+          <div class="w-12 h-12 rounded-lg flex items-center justify-center text-primary" style="background:rgba(104,68,199,0.1)">
+            <span class="material-symbols-outlined">terminal</span>
+          </div>
+          <h3 class="font-serif text-2xl">Software Engineering</h3>
+        </div>
+        <p class="font-sans text-base text-on-surface-var leading-relaxed mb-8">
+          Building seamless, performant digital experiences from concept to deployment — specialising in modular architecture, real-time systems and modern full-stack stacks.
+        </p>
+        <div class="flex flex-wrap gap-2">
+          <span class="badge px-4 py-1.5">React.js</span>
+          <span class="badge px-4 py-1.5">Next.js</span>
+          <span class="badge px-4 py-1.5">Node.js</span>
+          <span class="badge px-4 py-1.5">TypeScript</span>
+          <span class="badge px-4 py-1.5">Firebase</span>
+        </div>
+      </div>
+      <!-- AI -->
+      <div class="glass rounded-xl p-10 md:mt-16">
+        <div class="flex items-center gap-4 mb-6">
+          <div class="w-12 h-12 rounded-lg flex items-center justify-center text-primary" style="background:rgba(104,68,199,0.1)">
+            <span class="material-symbols-outlined">psychology</span>
+          </div>
+          <h3 class="font-serif text-2xl">AI & Machine Learning</h3>
+        </div>
+        <p class="font-sans text-base text-on-surface-var leading-relaxed mb-8">
+          Integrating AI capabilities into real products — from LLM-powered features to custom ML pipelines — making AI useful, accessible and production-ready.
+        </p>
+        <div class="flex flex-wrap gap-2">
+          <span class="badge px-4 py-1.5">Python</span>
+          <span class="badge px-4 py-1.5">Gemini API</span>
+          <span class="badge px-4 py-1.5">LangChain</span>
+          <span class="badge px-4 py-1.5">HuggingFace</span>
+          <span class="badge px-4 py-1.5">Supabase</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════════ WORK ════════════════════════════ -->
+<section id="work" class="px-8 md:px-16 py-28 reveal">
+  <div class="max-w-6xl mx-auto">
+    <div class="mb-16">
+      <span class="inline-block font-sans text-xs font-semibold tracking-[.3em] uppercase px-3 py-1.5 rounded-full mb-5" style="background:#e8ddff;color:#5028ae">GitHub Projects</span>
+      <h2 class="font-serif text-4xl md:text-5xl max-w-2xl leading-tight">
+        Real projects. Real code. <em class="grad-text not-italic">Live on GitHub.</em>
+      </h2>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-12 gap-6">
+      <!-- Featured: AI Career Mentor -->
+      <div class="md:col-span-8 group">
+        <div class="glass rounded-xl overflow-hidden h-full flex flex-col md:flex-row">
+          <div class="md:w-5/12 flex items-center justify-center min-h-[220px]" style="background:linear-gradient(135deg,rgba(104,68,199,0.15),rgba(157,123,255,0.1))">
+            <span class="material-symbols-outlined text-7xl" style="color:#9d7bff;font-variation-settings:'FILL' 0,'wght' 200">psychology</span>
+          </div>
+          <div class="md:w-7/12 p-8 flex flex-col justify-between">
+            <div>
+              <div class="flex items-center justify-between mb-3">
+                <span class="font-sans text-xs font-semibold tracking-widest uppercase text-primary">RAG / LLM</span>
+                <span class="font-sans text-xs text-on-surface-var">Python · Featured</span>
+              </div>
+              <h3 class="font-serif text-2xl text-on-background mb-3">AI Career Mentor</h3>
+              <p class="font-sans text-sm text-on-surface-var leading-relaxed mb-5">End-to-end RAG pipeline with ChromaDB vector storage, dual-LLM support (Gemini 1.5 + GPT-4o), skill-gap analytics, and a FastAPI backend with 8+ PostgreSQL tables.</p>
+              <div class="flex flex-wrap gap-2">
+                <span class="badge px-3 py-1">Python</span>
+                <span class="badge px-3 py-1">LangChain</span>
+                <span class="badge px-3 py-1">Gemini 1.5</span>
+                <span class="badge px-3 py-1">FastAPI</span>
+                <span class="badge px-3 py-1">ChromaDB</span>
+              </div>
+            </div>
+            <a class="mt-6 flex items-center gap-2 text-primary text-sm font-semibold font-sans hover:gap-4 transition-all" href="https://github.com/Hrudaideepak/-AI-Career-Mentor---Your-Personal-Career-Guidance-Platform--gemini" target="_blank">View on GitHub <span class="material-symbols-outlined text-[17px]">open_in_new</span></a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Stats -->
+      <div class="md:col-span-4">
+        <div class="stat-card rounded-xl p-8 h-full flex flex-col justify-center text-center">
+          <span class="material-symbols-outlined text-5xl text-primary mb-4">code</span>
+          <div class="font-serif text-5xl text-primary mb-2">10+</div>
+          <p class="font-sans text-sm text-on-surface-var">Public repositories on GitHub — AI, full-stack, data pipelines, and more.</p>
+          <a href="https://github.com/Hrudaideepak" target="_blank" class="mt-4 font-sans text-xs font-semibold text-primary tracking-widest uppercase hover:underline">View GitHub →</a>
+        </div>
+      </div>
+
+      <!-- Vanix -->
+      <div class="md:col-span-4">
+        <div class="glass rounded-xl overflow-hidden group h-full flex flex-col">
+          <div class="h-44 flex items-center justify-center" style="background:linear-gradient(135deg,rgba(104,68,199,0.18),rgba(157,123,255,0.1))">
+            <span class="material-symbols-outlined text-5xl group-hover:rotate-12 transition-transform duration-500" style="color:#9d7bff">movie</span>
+          </div>
+          <div class="p-6 flex flex-col flex-1">
+            <span class="font-sans text-xs font-semibold tracking-widest uppercase text-primary mb-2">Flutter · AI</span>
+            <h3 class="font-serif text-xl text-on-background mb-2">Vanix</h3>
+            <p class="font-sans text-sm text-on-surface-var mb-4 leading-relaxed">AI-powered cinema &amp; streaming Flutter app with Gemini API recommendations, Firebase auth, and real-time Firestore sync.</p>
+            <div class="mt-auto flex flex-wrap gap-2">
+              <span class="badge px-2 py-1">Flutter</span>
+              <span class="badge px-2 py-1">Dart</span>
+              <span class="badge px-2 py-1">Gemini API</span>
+              <span class="badge px-2 py-1">Firebase</span>
+            </div>
+            <a class="mt-4 flex items-center gap-2 text-primary text-xs font-semibold font-sans" href="https://github.com/Hrudaideepak/vanix" target="_blank">GitHub <span class="material-symbols-outlined text-[14px]">open_in_new</span></a>
+          </div>
+        </div>
+      </div>
+
+      <!-- IQ Island -->
+      <div class="md:col-span-8">
+        <div class="glass rounded-xl overflow-hidden group flex flex-col md:flex-row-reverse h-full">
+          <div class="md:w-5/12 flex items-center justify-center min-h-[180px] relative overflow-hidden" style="background:linear-gradient(135deg,rgba(157,123,255,0.18),rgba(232,221,255,0.4))">
+            <span class="material-symbols-outlined text-6xl group-hover:scale-110 transition-transform duration-700" style="color:#9d7bff">quiz</span>
+          </div>
+          <div class="md:w-7/12 p-8 flex flex-col justify-between">
+            <div>
+              <div class="flex items-center justify-between mb-3">
+                <span class="font-sans text-xs font-semibold tracking-widest uppercase text-primary">AI · EdTech</span>
+                <span class="font-sans text-xs text-on-surface-var">Python</span>
+              </div>
+              <h3 class="font-serif text-2xl text-on-background mb-3">IQ Island</h3>
+              <p class="font-sans text-sm text-on-surface-var leading-relaxed mb-5">Adaptive AI quiz platform using Gemini API to generate contextual questions dynamically. Features a scoring engine, performance tracker, and personalised learning roadmaps.</p>
+              <div class="flex flex-wrap gap-2">
+                <span class="badge px-3 py-1">Python</span>
+                <span class="badge px-3 py-1">Gemini API</span>
+                <span class="badge px-3 py-1">Adaptive AI</span>
+                <span class="badge px-3 py-1">React</span>
+              </div>
+            </div>
+            <a class="mt-6 flex items-center gap-2 text-primary text-sm font-semibold font-sans hover:gap-4 transition-all" href="https://github.com/Hrudaideepak/IQisland" target="_blank">View on GitHub <span class="material-symbols-outlined text-[17px]">open_in_new</span></a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Roast My Code -->
+      <div class="md:col-span-4">
+        <div class="glass rounded-xl overflow-hidden group h-full flex flex-col">
+          <div class="h-44 flex items-center justify-center" style="background:linear-gradient(135deg,rgba(104,68,199,0.12),rgba(157,123,255,0.08))">
+            <span class="material-symbols-outlined text-5xl group-hover:scale-110 transition-transform duration-500 text-primary">code_blocks</span>
+          </div>
+          <div class="p-6 flex flex-col flex-1">
+            <span class="font-sans text-xs font-semibold tracking-widest uppercase text-primary mb-2">TypeScript · LLM</span>
+            <h3 class="font-serif text-xl mb-2">Roast My Code</h3>
+            <p class="font-sans text-sm text-on-surface-var mb-4">LLM-powered GitHub analytics tool that uses Gemini 1.5 to analyse repo structure and deliver personality-driven code-quality feedback. Deployed on Vercel.</p>
+            <div class="mt-auto flex flex-wrap gap-2">
+              <span class="badge px-2 py-1">TypeScript</span>
+              <span class="badge px-2 py-1">GitHub API</span>
+              <span class="badge px-2 py-1">Gemini 1.5</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Sync Tube -->
+      <div class="md:col-span-4">
+        <div class="glass rounded-xl overflow-hidden group h-full flex flex-col">
+          <div class="h-44 flex items-center justify-center" style="background:linear-gradient(135deg,rgba(157,123,255,0.15),rgba(104,68,199,0.08))">
+            <span class="material-symbols-outlined text-5xl group-hover:scale-110 transition-transform duration-500 text-primary">sync_alt</span>
+          </div>
+          <div class="p-6 flex flex-col flex-1">
+            <span class="font-sans text-xs font-semibold tracking-widest uppercase text-primary mb-2">JavaScript · Live</span>
+            <h3 class="font-serif text-xl mb-2">Sync Tube</h3>
+            <p class="font-sans text-sm text-on-surface-var mb-4">Real-time collaborative video player featuring synchronized playback, virtual rooms, and low-latency state synchronization using Socket.io and React.</p>
+            <div class="mt-auto flex flex-wrap gap-2">
+              <span class="badge px-2 py-1">JavaScript</span>
+              <span class="badge px-2 py-1">Socket.io</span>
+              <span class="badge px-2 py-1">React</span>
+              <span class="badge px-2 py-1">Node.js</span>
+            </div>
+            <a class="mt-4 flex items-center gap-2 text-primary text-xs font-semibold font-sans" href="https://github.com/Hrudaideepak/sync-tube" target="_blank">GitHub <span class="material-symbols-outlined text-[14px]">open_in_new</span></a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Quote Generator -->
+      <div class="md:col-span-4">
+        <div class="glass rounded-xl overflow-hidden group h-full flex flex-col">
+          <div class="h-44 flex items-center justify-center" style="background:linear-gradient(135deg,rgba(232,221,255,0.5),rgba(157,123,255,0.12))">
+            <span class="material-symbols-outlined text-5xl group-hover:scale-110 transition-transform duration-500 text-primary">format_quote</span>
+          </div>
+          <div class="p-6 flex flex-col flex-1">
+            <span class="font-sans text-xs font-semibold tracking-widest uppercase text-primary mb-2">JavaScript · Live</span>
+            <h3 class="font-serif text-xl mb-2">Aesthetic Quote Generator</h3>
+            <p class="font-sans text-sm text-on-surface-var mb-4">Live web app deployed on GitHub Pages — aesthetically designed random quote generator with clean vanilla JS.</p>
+            <div class="mt-auto flex flex-wrap gap-2">
+              <span class="badge px-2 py-1">JavaScript</span>
+              <span class="badge px-2 py-1">GitHub Pages</span>
+              <span class="badge px-2 py-1">Live</span>
+            </div>
+            <a class="mt-4 flex items-center gap-2 text-primary text-xs font-semibold font-sans" href="https://github.com/Hrudaideepak/random_asthetic_Quote_generator" target="_blank">GitHub <span class="material-symbols-outlined text-[14px]">open_in_new</span></a>
+          </div>
+        </div>
+      </div>
+
+      <!-- CTA Banner -->
+      <div class="md:col-span-12">
+        <div class="glass rounded-xl p-12 relative overflow-hidden">
+          <div class="absolute -bottom-20 -right-20 w-72 h-72 rounded-full blur-3xl pointer-events-none" style="background:rgba(157,123,255,0.12)"></div>
+          <div class="max-w-xl relative z-10">
+            <h2 class="font-serif text-4xl text-on-background mb-5">Let's solve complex <em class="grad-text not-italic">problems</em> together.</h2>
+            <p class="font-sans text-lg text-on-surface-var mb-8">Available for internships, freelance projects, collaborations, and full-time AI/ML or full-stack roles.</p>
+            <div class="flex flex-wrap gap-4">
+              <a href="#connect" class="btn-primary flex items-center gap-2 px-8 py-4 font-sans text-xs font-semibold tracking-widest uppercase shadow-xl">Start a Project <span class="material-symbols-outlined">bolt</span></a>
+              <a href="resume.html" target="_blank" class="btn-ghost flex items-center gap-2 px-8 py-4 font-sans text-xs font-semibold tracking-widest uppercase"><span class="material-symbols-outlined text-[18px]">description</span> View Resume</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════════ STACK ════════════════════════════ -->
+<section id="stack" class="purple-section px-8 md:px-16 py-28 reveal">
+  <div class="max-w-6xl mx-auto">
+    <header class="mb-20 max-w-3xl">
+      <span class="font-sans text-xs font-semibold tracking-[.3em] uppercase text-primary block mb-4">Tech Stack</span>
+      <h2 class="font-serif text-4xl md:text-5xl text-primary mb-6">The Architecture of Creation</h2>
+      <p class="font-sans text-lg text-on-surface-var">A curated ecosystem of technologies powering everything I build — from polished interfaces to robust AI pipelines.</p>
+    </header>
+
+    <div class="grid grid-cols-1 md:grid-cols-12 gap-6 mb-20">
+      <!-- Frontend 8 col -->
+      <section class="md:col-span-8 glass rounded-xl p-10 glow">
+        <div class="flex items-center gap-4 mb-8">
+          <span class="material-symbols-outlined text-3xl text-primary">layers</span>
+          <h3 class="font-serif text-2xl">Frontend</h3>
+        </div>
+        <div class="grid grid-cols-2 sm:grid-cols-4 gap-8">
+          <!-- each skill -->
+          <div class="group flex flex-col items-center text-center gap-2">
+            <div class="w-16 h-16 rounded-full flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-white transition-all duration-300" style="background:#f4f2fd">
+              <span class="material-symbols-outlined text-2xl">terminal</span>
+            </div>
+            <span class="font-sans text-xs font-semibold tracking-wide uppercase" style="color:#494553">React.js</span>
+          </div>
+          <div class="group flex flex-col items-center text-center gap-2">
+            <div class="w-16 h-16 rounded-full flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-white transition-all duration-300" style="background:#f4f2fd">
+              <span class="material-symbols-outlined text-2xl">web</span>
+            </div>
+            <span class="font-sans text-xs font-semibold tracking-wide uppercase" style="color:#494553">Next.js</span>
+          </div>
+          <div class="group flex flex-col items-center text-center gap-2">
+            <div class="w-16 h-16 rounded-full flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-white transition-all duration-300" style="background:#f4f2fd">
+              <span class="material-symbols-outlined text-2xl">palette</span>
+            </div>
+            <span class="font-sans text-xs font-semibold tracking-wide uppercase" style="color:#494553">Tailwind</span>
+          </div>
+          <div class="group flex flex-col items-center text-center gap-2">
+            <div class="w-16 h-16 rounded-full flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-white transition-all duration-300" style="background:#f4f2fd">
+              <span class="material-symbols-outlined text-2xl">javascript</span>
+            </div>
+            <span class="font-sans text-xs font-semibold tracking-wide uppercase" style="color:#494553">TypeScript</span>
+          </div>
+          <div class="group flex flex-col items-center text-center gap-2">
+            <div class="w-16 h-16 rounded-full flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-white transition-all duration-300" style="background:#f4f2fd">
+              <span class="material-symbols-outlined text-2xl">phone_android</span>
+            </div>
+            <span class="font-sans text-xs font-semibold tracking-wide uppercase" style="color:#494553">Flutter</span>
+          </div>
+          <div class="group flex flex-col items-center text-center gap-2">
+            <div class="w-16 h-16 rounded-full flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-white transition-all duration-300" style="background:#f4f2fd">
+              <span class="material-symbols-outlined text-2xl">animation</span>
+            </div>
+            <span class="font-sans text-xs font-semibold tracking-wide uppercase" style="color:#494553">Framer</span>
+          </div>
+          <div class="group flex flex-col items-center text-center gap-2">
+            <div class="w-16 h-16 rounded-full flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-white transition-all duration-300" style="background:#f4f2fd">
+              <span class="material-symbols-outlined text-2xl">design_services</span>
+            </div>
+            <span class="font-sans text-xs font-semibold tracking-wide uppercase" style="color:#494553">Figma</span>
+          </div>
+          <div class="group flex flex-col items-center text-center gap-2">
+            <div class="w-16 h-16 rounded-full flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-white transition-all duration-300" style="background:#f4f2fd">
+              <span class="material-symbols-outlined text-2xl">token</span>
+            </div>
+            <span class="font-sans text-xs font-semibold tracking-wide uppercase" style="color:#494553">Three.js</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- Backend 4 col -->
+      <section class="md:col-span-4 glass rounded-xl p-10 glow">
+        <div class="flex items-center gap-4 mb-8">
+          <span class="material-symbols-outlined text-3xl text-primary">database</span>
+          <h3 class="font-serif text-2xl">Backend</h3>
+        </div>
+        <div class="grid grid-cols-2 gap-y-10 gap-x-4">
+          <div class="group flex flex-col items-center text-center gap-2">
+            <div class="w-14 h-14 rounded-full flex items-center justify-center text-primary group-hover:scale-110 transition-all duration-300" style="background:#f4f2fd">
+              <span class="material-symbols-outlined text-xl">code</span>
+            </div>
+            <span class="font-sans text-[10px] font-semibold tracking-wide uppercase" style="color:#494553">Node.js</span>
+          </div>
+          <div class="group flex flex-col items-center text-center gap-2">
+            <div class="w-14 h-14 rounded-full flex items-center justify-center text-primary group-hover:scale-110 transition-all duration-300" style="background:#f4f2fd">
+              <span class="material-symbols-outlined text-xl">storage</span>
+            </div>
+            <span class="font-sans text-[10px] font-semibold tracking-wide uppercase" style="color:#494553">MongoDB</span>
+          </div>
+          <div class="group flex flex-col items-center text-center gap-2">
+            <div class="w-14 h-14 rounded-full flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-white transition-all duration-300" style="background:#f4f2fd">
+              <span class="material-symbols-outlined text-xl">bolt</span>
+            </div>
+            <span class="font-sans text-[10px] font-semibold tracking-wide uppercase" style="color:#494553">Firebase</span>
+          </div>
+          <div class="group flex flex-col items-center text-center gap-2">
+            <div class="w-14 h-14 rounded-full flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-white transition-all duration-300" style="background:#f4f2fd">
+              <span class="material-symbols-outlined text-xl">api</span>
+            </div>
+            <span class="font-sans text-[10px] font-semibold tracking-wide uppercase" style="color:#494553">Supabase</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- AI & Data 4 col -->
+      <section class="md:col-span-4 glass rounded-xl p-10 glow">
+        <div class="flex items-center gap-4 mb-8">
+          <span class="material-symbols-outlined text-3xl text-primary">psychology</span>
+          <h3 class="font-serif text-2xl">AI & Data</h3>
+        </div>
+        <ul class="space-y-5">
+          <li class="flex items-center justify-between pb-4 rsep">
+            <span class="font-sans text-base text-on-surface-var">Python</span>
+            <span class="material-symbols-outlined text-xl" style="color:#9d7bff;font-variation-settings:'FILL' 1">star</span>
+          </li>
+          <li class="flex items-center justify-between pb-4 rsep">
+            <span class="font-sans text-base text-on-surface-var">Gemini API</span>
+            <span class="material-symbols-outlined text-xl" style="color:#9d7bff;font-variation-settings:'FILL' 1">star</span>
+          </li>
+          <li class="flex items-center justify-between pb-4 rsep">
+            <span class="font-sans text-base text-on-surface-var">LangChain</span>
+            <span class="material-symbols-outlined text-xl" style="color:#9d7bff;font-variation-settings:'FILL' 1">star</span>
+          </li>
+          <li class="flex items-center justify-between">
+            <span class="font-sans text-base text-on-surface-var">HuggingFace</span>
+            <span class="material-symbols-outlined text-xl" style="color:#9d7bff;font-variation-settings:'FILL' 1">star</span>
+          </li>
+        </ul>
+      </section>
+
+      <!-- Infrastructure 8 col -->
+      <section class="md:col-span-8 glass rounded-xl p-10 glow">
+        <div class="flex items-center gap-4 mb-8">
+          <span class="material-symbols-outlined text-3xl text-primary">cloud</span>
+          <h3 class="font-serif text-2xl">Infrastructure & Tools</h3>
+        </div>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-x-12 gap-y-7">
+          <div class="flex gap-5 items-start">
+            <div class="p-3 rounded-lg text-primary" style="background:rgba(232,221,255,0.5)"><span class="material-symbols-outlined">dns</span></div>
+            <div><h4 class="font-sans text-xs font-semibold tracking-widest uppercase text-on-surface mb-1">Cloud & Deploy</h4><p class="font-sans text-sm text-on-surface-var">Vercel, Firebase Hosting, Railway</p></div>
+          </div>
+          <div class="flex gap-5 items-start">
+            <div class="p-3 rounded-lg text-primary" style="background:rgba(232,221,255,0.5)"><span class="material-symbols-outlined">integration_instructions</span></div>
+            <div><h4 class="font-sans text-xs font-semibold tracking-widest uppercase text-on-surface mb-1">CI/CD & Git</h4><p class="font-sans text-sm text-on-surface-var">Git, GitHub, GitHub Actions</p></div>
+          </div>
+          <div class="flex gap-5 items-start">
+            <div class="p-3 rounded-lg text-primary" style="background:rgba(232,221,255,0.5)"><span class="material-symbols-outlined">deployed_code</span></div>
+            <div><h4 class="font-sans text-xs font-semibold tracking-widest uppercase text-on-surface mb-1">Containers</h4><p class="font-sans text-sm text-on-surface-var">Docker, basic Kubernetes</p></div>
+          </div>
+          <div class="flex gap-5 items-start">
+            <div class="p-3 rounded-lg text-primary" style="background:rgba(232,221,255,0.5)"><span class="material-symbols-outlined">security</span></div>
+            <div><h4 class="font-sans text-xs font-semibold tracking-widest uppercase text-on-surface mb-1">Auth & Security</h4><p class="font-sans text-sm text-on-surface-var">JWT, OAuth 2.0, Firebase Auth</p></div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- Learning Path -->
+    <div class="flex flex-col md:flex-row items-end justify-between mb-12 gap-4">
+      <div>
+        <span class="font-sans text-xs font-semibold tracking-[.3em] uppercase text-primary block mb-3">Future Trajectory</span>
+        <h3 class="font-serif text-4xl">Learning Path</h3>
+      </div>
+      <p class="font-sans text-base text-on-surface-var md:max-w-xs">Exploring the frontiers of generative AI and spatial computing.</p>
+    </div>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+      <div class="p-8 rounded-xl border hover:shadow-lg transition-shadow group" style="background:#fff;border-color:rgba(157,123,255,0.25)">
+        <div class="flex items-center justify-between mb-6">
+          <span class="font-serif text-3xl font-bold text-primary opacity-30">01</span>
+          <div class="w-12 h-12 rounded-full flex items-center justify-center text-primary group-hover:rotate-12 transition-transform" style="background:#f4f2fd">
+            <span class="material-symbols-outlined">psychology</span>
+          </div>
+        </div>
+        <h4 class="font-serif text-xl mb-3">LLM Orchestration</h4>
+        <p class="font-sans text-sm text-on-surface-var mb-6">Deepening expertise in LangChain and vector databases for autonomous AI agents.</p>
+        <div class="w-full rounded-full h-1 overflow-hidden" style="background:#e3e1ec">
+          <div class="pbar h-full rounded-full" style="background:#6844c7" data-width="65"></div>
+        </div>
+        <span class="font-sans text-[10px] mt-2 block tracking-widest uppercase text-primary">65% Proficiency</span>
+      </div>
+      <div class="p-8 rounded-xl border hover:shadow-lg transition-shadow group" style="background:#fff;border-color:rgba(157,123,255,0.25)">
+        <div class="flex items-center justify-between mb-6">
+          <span class="font-serif text-3xl font-bold text-primary opacity-30">02</span>
+          <div class="w-12 h-12 rounded-full flex items-center justify-center text-primary group-hover:rotate-12 transition-transform" style="background:#f4f2fd">
+            <span class="material-symbols-outlined">view_in_ar</span>
+          </div>
+        </div>
+        <h4 class="font-serif text-xl mb-3">Spatial UI Design</h4>
+        <p class="font-sans text-sm text-on-surface-var mb-6">Prototyping immersive experiences for WebXR and mixed-reality platforms.</p>
+        <div class="w-full rounded-full h-1 overflow-hidden" style="background:#e3e1ec">
+          <div class="pbar h-full rounded-full" style="background:#6844c7" data-width="40"></div>
+        </div>
+        <span class="font-sans text-[10px] mt-2 block tracking-widest uppercase text-primary">40% Proficiency</span>
+      </div>
+      <div class="p-8 rounded-xl border hover:shadow-lg transition-shadow group" style="background:#fff;border-color:rgba(157,123,255,0.25)">
+        <div class="flex items-center justify-between mb-6">
+          <span class="font-serif text-3xl font-bold text-primary opacity-30">03</span>
+          <div class="w-12 h-12 rounded-full flex items-center justify-center text-primary group-hover:rotate-12 transition-transform" style="background:#f4f2fd">
+            <span class="material-symbols-outlined">architecture</span>
+          </div>
+        </div>
+        <h4 class="font-serif text-xl mb-3">Rust Backend</h4>
+        <p class="font-sans text-sm text-on-surface-var mb-6">Implementing memory-safe, high-performance microservices for real-time data streaming.</p>
+        <div class="w-full rounded-full h-1 overflow-hidden" style="background:#e3e1ec">
+          <div class="pbar h-full rounded-full" style="background:#6844c7" data-width="25"></div>
+        </div>
+        <span class="font-sans text-[10px] mt-2 block tracking-widest uppercase text-primary">25% Proficiency</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════════ INSIGHTS ════════════════════════════ -->
+<section id="insights" class="px-8 md:px-16 py-28 reveal">
+  <div class="max-w-6xl mx-auto">
+    <header class="mb-20 max-w-3xl">
+      <span class="font-sans text-xs font-semibold tracking-[.3em] uppercase text-primary block mb-4">Thoughts &amp; Insights</span>
+      <h2 class="font-serif text-4xl md:text-5xl mb-5 leading-tight">
+        Synthesising ideas into <em class="grad-text not-italic">clear narratives.</em>
+      </h2>
+      <p class="font-sans text-lg text-on-surface-var">Technical deep-dives, project reflections, and thoughts on AI, development, and the future of software.</p>
+    </header>
+
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
+      <!-- Feed -->
+      <div class="lg:col-span-8 flex flex-col gap-10">
+        <!-- Featured article -->
+        <article class="glass glow rounded-xl p-8 md:p-12 group cursor-pointer overflow-hidden relative insight-card"
+          data-tag="Deep Dive" data-read="10 min"
+          data-title="Building AI-Powered Apps: Lessons from the Trenches"
+          data-summary="What I've learned building 8+ AI-integrated products — from prompt engineering pitfalls to cost optimisation strategies and real user feedback loops.">
+          <div class="absolute top-0 right-0 w-64 h-64 rounded-full -mr-32 -mt-32 blur-3xl pointer-events-none group-hover:opacity-100 opacity-60 transition-opacity" style="background:rgba(157,123,255,0.1)"></div>
+          <div class="relative z-10">
+            <div class="flex items-center gap-4 mb-6">
+              <span class="modal-tag">Deep Dive</span>
+              <span class="font-sans text-xs text-on-surface-var">10 Min Read</span>
+            </div>
+            <h3 class="font-serif text-3xl md:text-4xl mb-5 group-hover:text-primary transition-colors">Building AI-Powered Apps: Lessons from the Trenches</h3>
+            <p class="font-sans text-lg text-on-surface-var mb-8 leading-relaxed">What I've learned building 8+ AI-integrated products — from prompt engineering pitfalls to cost optimisation strategies and real user feedback loops.</p>
+            <button class="flex items-center gap-2 text-primary font-sans text-sm font-semibold group-hover:translate-x-2 transition-transform open-insight">
+              Read Full Analysis <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+            </button>
+          </div>
+        </article>
+
+        <div class="rsep my-2"></div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <article class="glass rounded-xl p-8 group cursor-pointer insight-card"
+            data-tag="Tutorial" data-read="7 min"
+            data-title="Integrating Gemini API into React Apps"
+            data-summary="A step-by-step guide to adding Gemini-powered features to your frontend projects.">
+            <span class="font-sans text-xs font-semibold tracking-widest uppercase text-secondary block mb-4">Tutorial</span>
+            <h3 class="font-serif text-xl mb-3 group-hover:text-primary transition-colors">Integrating Gemini API into React Apps</h3>
+            <p class="font-sans text-sm text-on-surface-var mb-5">A step-by-step guide to adding Gemini-powered features to your frontend projects.</p>
+            <button class="flex items-center gap-2 text-primary font-sans text-xs font-semibold open-insight">Explore <span class="material-symbols-outlined text-[16px]">north_east</span></button>
+          </article>
+
+          <article class="glass rounded-xl p-8 group cursor-pointer insight-card"
+            data-tag="Architecture" data-read="8 min"
+            data-title="Real-time Apps with Socket.io & MongoDB"
+            data-summary="How I built the collaboration engine behind Sync Tube from scratch — architecture decisions, pitfalls, and performance tips.">
+            <span class="font-sans text-xs font-semibold tracking-widest uppercase text-secondary block mb-4">Architecture</span>
+            <h3 class="font-serif text-xl mb-3 group-hover:text-primary transition-colors">Real-time Apps with Socket.io &amp; MongoDB</h3>
+            <p class="font-sans text-sm text-on-surface-var mb-5">How I built the collaboration engine behind Sync Tube from scratch.</p>
+            <button class="flex items-center gap-2 text-primary font-sans text-xs font-semibold open-insight">Explore <span class="material-symbols-outlined text-[16px]">north_east</span></button>
+          </article>
+
+          <article class="glass rounded-xl p-8 group cursor-pointer insight-card"
+            data-tag="Opinion" data-read="5 min"
+            data-title="Why Every Developer Needs an AI Mindset"
+            data-summary="AI isn't replacing developers — it's a multiplier for those who embrace it. Here's why adopting an AI-first workflow will define the next generation of engineers.">
+            <span class="font-sans text-xs font-semibold tracking-widest uppercase text-secondary block mb-4">Opinion</span>
+            <h3 class="font-serif text-xl mb-3 group-hover:text-primary transition-colors">Why Every Developer Needs an AI Mindset</h3>
+            <p class="font-sans text-sm text-on-surface-var mb-5">AI isn't replacing developers — it's a multiplier for those who know how to use it.</p>
+            <button class="flex items-center gap-2 text-primary font-sans text-xs font-semibold open-insight">Explore <span class="material-symbols-outlined text-[16px]">north_east</span></button>
+          </article>
+
+          <article class="glass rounded-xl p-8 group cursor-pointer insight-card"
+            data-tag="Project" data-read="6 min"
+            data-title="From Idea to Deployed: The Wardrobe AI Story"
+            data-summary="The full journey — design decisions, tech stack choices, user feedback, and the launch of an AI-powered fashion recommender app built with Flutter and Python.">
+            <span class="font-sans text-xs font-semibold tracking-widest uppercase text-secondary block mb-4">Project</span>
+            <h3 class="font-serif text-xl mb-3 group-hover:text-primary transition-colors">From Idea to Deployed: Wardrobe AI Story</h3>
+            <p class="font-sans text-sm text-on-surface-var mb-5">The full journey — design, build, and launch of an AI fashion recommender app.</p>
+            <button class="flex items-center gap-2 text-primary font-sans text-xs font-semibold open-insight">Explore <span class="material-symbols-outlined text-[16px]">north_east</span></button>
+          </article>
+        </div>
+      </div>
+
+      <!-- Sidebar -->
+      <aside class="lg:col-span-4 flex flex-col gap-6">
+        <div class="glass rounded-xl p-8">
+          <div class="flex items-center gap-3 mb-6">
+            <span class="material-symbols-outlined text-primary">target</span>
+            <h4 class="font-sans text-xs font-semibold tracking-widest uppercase">Current Focus</h4>
+          </div>
+          <ul class="space-y-6">
+            <li>
+              <div class="flex justify-between items-start mb-2">
+                <span class="font-serif text-lg text-primary">AI Agent Frameworks</span>
+                <span class="font-sans text-[10px] px-2 py-0.5 rounded" style="background:#e9def5;color:#696174">Active</span>
+              </div>
+              <p class="font-sans text-sm text-on-surface-var">Building multi-agent systems with LangGraph and Gemini.</p>
+            </li>
+            <div class="rsep"></div>
+            <li>
+              <div class="flex justify-between items-start mb-2">
+                <span class="font-serif text-lg text-on-surface-var">Full-stack SaaS</span>
+                <span class="font-sans text-[10px] px-2 py-0.5 rounded border" style="color:#7a7485;border-color:#cbc3d5">In Progress</span>
+              </div>
+              <p class="font-sans text-sm text-on-surface-var">Launching a subscription-based developer tool product.</p>
+            </li>
+            <div class="rsep"></div>
+            <li>
+              <div class="flex justify-between items-start mb-2">
+                <span class="font-serif text-lg text-on-surface-var">Open Source</span>
+                <span class="font-sans text-[10px] px-2 py-0.5 rounded border" style="color:#7a7485;border-color:#cbc3d5">Ongoing</span>
+              </div>
+              <p class="font-sans text-sm text-on-surface-var">Contributing to React and Firebase community libraries.</p>
+            </li>
+          </ul>
+        </div>
+
+        <div class="rounded-xl p-8" style="background:linear-gradient(135deg,rgba(104,68,199,0.1),rgba(157,123,255,0.07));border:1px solid rgba(157,123,255,0.22)">
+          <h4 class="font-sans text-xs font-semibold tracking-widest uppercase text-primary mb-6">By The Numbers</h4>
+          <div class="space-y-4">
+            <div class="flex justify-between items-center"><span class="font-sans text-sm text-on-surface-var">Projects Shipped</span><span class="font-serif text-2xl text-primary font-medium">8+</span></div>
+            <div class="rsep"></div>
+            <div class="flex justify-between items-center"><span class="font-sans text-sm text-on-surface-var">Technologies</span><span class="font-serif text-2xl text-primary font-medium">20+</span></div>
+            <div class="rsep"></div>
+            <div class="flex justify-between items-center"><span class="font-sans text-sm text-on-surface-var">GitHub Commits</span><span class="font-serif text-2xl text-primary font-medium">500+</span></div>
+            <div class="rsep"></div>
+            <div class="flex justify-between items-center"><span class="font-sans text-sm text-on-surface-var">AI Integrations</span><span class="font-serif text-2xl text-primary font-medium">5+</span></div>
+          </div>
+        </div>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════════ CERTIFICATIONS ════════════════════════════ -->
+<section id="certifications" class="px-8 md:px-16 py-28 purple-section reveal">
+  <div class="max-w-6xl mx-auto">
+    <header class="mb-16 max-w-3xl">
+      <span class="font-sans text-xs font-semibold tracking-[.3em] uppercase text-primary block mb-4">Credentials</span>
+      <h2 class="font-serif text-4xl md:text-5xl mb-5 leading-tight">Certifications &amp; <em class="grad-text not-italic">Achievements.</em></h2>
+      <p class="font-sans text-base text-on-surface-var">Professional credentials, hackathon wins, and academic achievements — <a href="https://linkedin.com/in/hrudai-deepak-bonagiri" target="_blank" class="text-primary hover:underline">view all on LinkedIn →</a></p>
+    </header>
+
+    <div class="grid grid-cols-1 md:grid-cols-12 gap-6">
+      <!-- Featured cert -->
+      <div class="md:col-span-5">
+        <div class="glass rounded-xl p-10 h-full flex flex-col glow" style="border-color:rgba(157,123,255,0.3)">
+          <div class="w-14 h-14 rounded-full flex items-center justify-center mb-6" style="background:linear-gradient(135deg,#6844c7,#9d7bff)">
+            <span class="material-symbols-outlined text-white text-2xl" style="font-variation-settings:'FILL' 1">verified</span>
+          </div>
+          <span class="font-sans text-xs font-semibold tracking-widest uppercase text-primary mb-3">Google Cloud</span>
+          <h3 class="font-serif text-2xl mb-4">Cloud Data Fundamentals</h3>
+          <p class="font-sans text-sm text-on-surface-var leading-relaxed mb-6">Professional Assessment — Score: <strong class="text-primary">80%</strong>. Covers cloud data pipelines, storage infrastructure, and GCP services.</p>
+          <div class="mt-auto flex flex-wrap gap-2">
+            <span class="badge px-3 py-1">Google Cloud</span>
+            <span class="badge px-3 py-1">Data Pipelines</span>
+            <span class="badge px-3 py-1">GCP</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Cert grid -->
+      <div class="md:col-span-7 grid grid-cols-1 sm:grid-cols-2 gap-6">
+        <div class="glass rounded-xl p-7 flex flex-col gap-3">
+          <div class="w-10 h-10 rounded-lg flex items-center justify-center text-primary" style="background:rgba(104,68,199,0.1)">
+            <span class="material-symbols-outlined">smart_toy</span>
+          </div>
+          <h4 class="font-serif text-lg">Generative AI &amp; Prompt Engineering</h4>
+          <p class="font-sans text-sm text-on-surface-var">Specialised workshop — industry ML model applications, LLM fine-tuning &amp; prompt design.</p>
+        </div>
+        <div class="glass rounded-xl p-7 flex flex-col gap-3">
+          <div class="w-10 h-10 rounded-lg flex items-center justify-center text-primary" style="background:rgba(104,68,199,0.1)">
+            <span class="material-symbols-outlined">web</span>
+          </div>
+          <h4 class="font-serif text-lg">Full-Stack Web Development</h4>
+          <p class="font-sans text-sm text-on-surface-var">Comprehensive certification covering HTML, CSS, JavaScript, and Python backend development.</p>
+        </div>
+        <div class="glass rounded-xl p-7 flex flex-col gap-3">
+          <div class="w-10 h-10 rounded-lg flex items-center justify-center text-primary" style="background:rgba(104,68,199,0.1)">
+            <span class="material-symbols-outlined">emoji_events</span>
+          </div>
+          <h4 class="font-serif text-lg">Hacksphere 2.0 — BITS Pilani</h4>
+          <p class="font-sans text-sm text-on-surface-var">Built software prototypes under tight constraints at ATMOS'25 — national hackathon at BITS Pilani Hyderabad Campus.</p>
+        </div>
+        <div class="glass rounded-xl p-7 flex flex-col gap-3">
+          <div class="w-10 h-10 rounded-lg flex items-center justify-center text-primary" style="background:rgba(104,68,199,0.1)">
+            <span class="material-symbols-outlined">school</span>
+          </div>
+          <h4 class="font-serif text-lg">Code4EdTech Hackathon</h4>
+          <p class="font-sans text-sm text-on-surface-var">Engineered innovative EdTech software solutions in a collaborative team sprint — awarded for impact &amp; execution.</p>
+        </div>
+      </div>
+
+      <!-- Academic + stat cards -->
+      <div class="md:col-span-4">
+        <div class="rounded-xl p-8 h-full flex flex-col justify-center" style="background:linear-gradient(135deg,rgba(104,68,199,0.12),rgba(157,123,255,0.07));border:1px solid rgba(157,123,255,0.22)">
+          <h4 class="font-sans text-xs font-semibold tracking-widest uppercase text-primary mb-6">Academic Standing</h4>
+          <div class="space-y-5">
+            <div class="flex items-center justify-between"><span class="font-sans text-sm text-on-surface-var">SSC (2019)</span><span class="font-serif text-2xl text-primary font-medium">97%</span></div>
+            <div class="rsep"></div>
+            <div class="flex items-center justify-between"><span class="font-sans text-sm text-on-surface-var">Intermediate (2021)</span><span class="font-serif text-2xl text-primary font-medium">94%</span></div>
+            <div class="rsep"></div>
+            <div class="flex items-center justify-between"><span class="font-sans text-sm text-on-surface-var">B.Tech (Ongoing)</span><span class="font-serif text-2xl text-primary font-medium">Top %</span></div>
+          </div>
+        </div>
+      </div>
+      <div class="md:col-span-8 glass rounded-xl p-8 flex flex-col justify-center">
+        <div class="flex items-center gap-4 mb-6">
+          <span class="material-symbols-outlined text-primary text-3xl" style="font-variation-settings:'FILL' 1">military_tech</span>
+          <h3 class="font-serif text-2xl">Also Noteworthy</h3>
+        </div>
+        <ul class="space-y-3">
+          <li class="flex items-start gap-3 font-sans text-sm text-on-surface-var"><span class="text-primary mt-0.5">▸</span> Active open-source contributor on GitHub — RAG systems, LLM orchestration, web automation, AI product development</li>
+          <li class="flex items-start gap-3 font-sans text-sm text-on-surface-var"><span class="text-primary mt-0.5">▸</span> Runner-up — College Showdown Singing Competition (communication confidence &amp; interpersonal skills)</li>
+          <li class="flex items-start gap-3 font-sans text-sm text-on-surface-var"><span class="text-primary mt-0.5">▸</span> B.Tech in Computer Science — AI &amp; Machine Learning, AITS Hyderabad (2023–2027)</li>
+          <li class="flex items-start gap-3 font-sans text-sm text-on-surface-var"><span class="text-primary mt-0.5">▸</span> Coursework: Neural Networks, NLP, Data Structures &amp; Algorithms, Advanced DBMS, Mathematical Foundations for AI</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════════ CONNECT ════════════════════════════ -->
+<section id="connect" class="purple-section relative px-8 md:px-16 py-28 overflow-hidden reveal">
+  <div class="absolute -top-40 -right-40 w-[500px] h-[500px] rounded-full pointer-events-none" style="background:radial-gradient(circle,rgba(157,123,255,0.15) 0%,transparent 70%)"></div>
+  <div class="absolute -bottom-40 -left-40 w-[400px] h-[400px] rounded-full pointer-events-none" style="background:radial-gradient(circle,rgba(104,68,199,0.1) 0%,transparent 70%)"></div>
+
+  <div class="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-16 items-start relative z-10">
+    <!-- Left -->
+    <div class="lg:col-span-5 flex flex-col space-y-12">
+      <div>
+        <span class="font-sans text-xs font-semibold tracking-[.3em] uppercase text-primary block mb-5">Connect With Me</span>
+        <h2 class="font-serif text-4xl md:text-5xl leading-tight mb-6">
+          Let's craft something <em class="grad-text not-italic">extraordinary</em> together.
+        </h2>
+        <p class="font-sans text-lg text-on-surface-var max-w-md">CS undergrad at AITS Hyderabad specialising in AI/ML. Open to internships, freelance, and full-time AI/Full-Stack roles. Let's build something remarkable together.</p>
+      </div>
+
+      <div class="space-y-8">
+        <div class="flex items-start gap-5 group">
+          <div class="w-12 h-12 rounded-full glass flex items-center justify-center text-primary group-hover:scale-110 transition-transform border" style="border-color:rgba(157,123,255,0.3)">
+            <span class="material-symbols-outlined">alternate_email</span>
+          </div>
+          <div>
+            <p class="font-sans text-xs font-semibold tracking-widest uppercase mb-1" style="color:rgba(99,91,110,0.55)">Email Me</p>
+            <a class="font-serif text-xl hover:text-primary transition-colors" href="mailto:hvd0003@gmail.com">hvd0003@gmail.com</a>
+          </div>
+        </div>
+        <div class="flex items-start gap-5 group">
+          <div class="w-12 h-12 rounded-full glass flex items-center justify-center text-primary group-hover:scale-110 transition-transform border" style="border-color:rgba(157,123,255,0.3)">
+            <span class="material-symbols-outlined">phone</span>
+          </div>
+          <div>
+            <p class="font-sans text-xs font-semibold tracking-widest uppercase mb-1" style="color:rgba(99,91,110,0.55)">Phone / WhatsApp</p>
+            <a class="font-serif text-xl hover:text-primary transition-colors" href="tel:+919849675783">+91 9849675783</a>
+          </div>
+        </div>
+        <div class="flex items-start gap-5 group">
+          <div class="w-12 h-12 rounded-full glass flex items-center justify-center text-primary group-hover:scale-110 transition-transform border" style="border-color:rgba(157,123,255,0.3)">
+            <span class="material-symbols-outlined">code</span>
+          </div>
+          <div>
+            <p class="font-sans text-xs font-semibold tracking-widest uppercase mb-1" style="color:rgba(99,91,110,0.55)">GitHub</p>
+            <a class="font-serif text-xl hover:text-primary transition-colors" href="https://github.com/Hrudaideepak" target="_blank">github.com/Hrudaideepak</a>
+          </div>
+        </div>
+        <div class="flex items-start gap-5 group">
+          <div class="w-12 h-12 rounded-full glass flex items-center justify-center text-primary group-hover:scale-110 transition-transform border" style="border-color:rgba(157,123,255,0.3)">
+            <span class="material-symbols-outlined">work</span>
+          </div>
+          <div>
+            <p class="font-sans text-xs font-semibold tracking-widest uppercase mb-1" style="color:rgba(99,91,110,0.55)">LinkedIn</p>
+            <a class="font-serif text-xl hover:text-primary transition-colors" href="https://linkedin.com/in/hrudaideepak" target="_blank">linkedin.com/in/hrudaideepak</a>
+          </div>
+        </div>
+        <div class="flex items-start gap-5 group">
+          <div class="w-12 h-12 rounded-full glass flex items-center justify-center text-primary group-hover:scale-110 transition-transform border" style="border-color:rgba(157,123,255,0.3)">
+            <span class="material-symbols-outlined">location_on</span>
+          </div>
+          <div>
+            <p class="font-sans text-xs font-semibold tracking-widest uppercase mb-1" style="color:rgba(99,91,110,0.55)">Location</p>
+            <p class="font-serif text-xl">India 🇮🇳</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Contact form -->
+    <div class="lg:col-span-7">
+      <div class="glass rounded-xl p-8 md:p-12 glow" style="border-color:rgba(157,123,255,0.3)">
+        <form id="contact-form" class="space-y-10">
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+            <div class="relative">
+              <input class="field" id="name" placeholder=" " required type="text"/>
+              <label class="flabel" for="name">Your Name</label>
+            </div>
+            <div class="relative">
+              <input class="field" id="email" placeholder=" " required type="email"/>
+              <label class="flabel" for="email">Email Address</label>
+            </div>
+          </div>
+          <div class="relative">
+            <select class="field appearance-none" id="subject">
+              <option disabled selected value=""></option>
+              <option value="fullstack">Full-Stack Development</option>
+              <option value="ai">AI Integration</option>
+              <option value="collab">Collaboration</option>
+              <option value="other">Something Else</option>
+            </select>
+            <label class="flabel" for="subject">What are we discussing?</label>
+            <div class="absolute right-0 top-4 pointer-events-none" style="color:rgba(99,91,110,0.4)"><span class="material-symbols-outlined text-sm">expand_more</span></div>
+          </div>
+          <div class="relative">
+            <textarea class="field resize-none" id="message" placeholder=" " required rows="4"></textarea>
+            <label class="flabel" for="message">Tell me about your vision...</label>
+          </div>
+          <div class="pt-4 flex flex-col md:flex-row items-center justify-between gap-8">
+            <p class="font-sans text-[10px] tracking-widest uppercase text-center md:text-left" style="color:rgba(99,91,110,0.4)">Your info stays private.<br/>No spam, ever.</p>
+            <button class="btn-primary w-full md:w-auto px-12 py-4 font-sans text-xs font-semibold tracking-widest uppercase flex items-center justify-center gap-3 shadow-xl" type="submit">
+              Send Message <span class="material-symbols-outlined text-sm">send</span>
+            </button>
+          </div>
+        </form>
+        <div class="hidden glass rounded-xl p-12 text-center space-y-6" id="form-success">
+          <div class="w-16 h-16 rounded-full flex items-center justify-center mx-auto" style="background:rgba(104,68,199,0.1)">
+            <span class="material-symbols-outlined text-primary text-3xl">check_circle</span>
+          </div>
+          <h3 class="font-serif text-2xl">Message Received!</h3>
+          <p class="font-sans text-base text-on-surface-var max-w-xs mx-auto">Thanks for reaching out! I'll get back to you within 48 hours.</p>
+          <button class="font-sans text-xs font-semibold uppercase tracking-widest text-primary border-b hover:border-primary transition-all" style="border-color:rgba(104,68,199,0.2)" onclick="resetForm()">Send another message</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════════ FOOTER ════════════════════════════ -->
+<footer class="w-full py-12 px-8 md:px-16 flex flex-col md:flex-row justify-between items-center gap-6 border-t" style="background:rgba(248,245,255,0.7);backdrop-filter:blur(12px);border-color:rgba(157,123,255,0.18)">
+  <div>
+    <div class="font-serif text-2xl text-primary font-medium mb-1">Hrudai Deepak</div>
+    <p class="font-sans text-xs tracking-widest uppercase" style="color:rgba(99,91,110,0.65)">© 2026 · Full-Stack Developer & AI Enthusiast</p>
+  </div>
+  <div class="flex gap-10">
+    <a class="font-sans text-xs font-semibold tracking-widest uppercase hover:text-primary transition-colors" style="color:#7a7485" href="https://github.com/Hrudaideepak" target="_blank">GitHub</a>
+    <a class="font-sans text-xs font-semibold tracking-widest uppercase hover:text-primary transition-colors" style="color:#7a7485" href="https://linkedin.com/in/hrudai-deepak-bonagiri" target="_blank">LinkedIn</a>
+    <a class="font-sans text-xs font-semibold tracking-widest uppercase hover:text-primary transition-colors" style="color:#7a7485" href="mailto:hvd0003@gmail.com">Email</a>
+    <a class="font-sans text-xs font-semibold tracking-widest uppercase hover:text-primary transition-colors" style="color:#7a7485" href="resume.html" target="_blank">Resume</a>
+  </div>
+</footer>
+
+<!-- ════════════════════════════ INSIGHT MODAL ════════════════════════════ -->
+<div id="insight-modal" role="dialog" aria-modal="true">
+  <div id="insight-card" role="document">
+    <!-- Header -->
+    <div class="flex items-start justify-between mb-6">
+      <div class="flex items-center gap-3 flex-wrap">
+        <span id="modal-tag" class="modal-tag"></span>
+        <span id="modal-read" class="font-sans text-xs" style="color:#7a7485"></span>
+      </div>
+      <button id="close-modal" class="w-9 h-9 rounded-full flex items-center justify-center hover:scale-110 transition-transform" style="background:rgba(104,68,199,0.08)">
+        <span class="material-symbols-outlined text-primary text-[20px]">close</span>
+      </button>
+    </div>
+
+    <h2 id="modal-title" class="font-serif text-3xl mb-4 leading-tight"></h2>
+    <p id="modal-summary" class="font-sans text-base leading-relaxed mb-8" style="color:#494553"></p>
+
+    <!-- AI-generated content area -->
+    <div id="modal-ai-content" class="rounded-xl p-6 mb-6" style="background:linear-gradient(135deg,rgba(104,68,199,0.06),rgba(157,123,255,0.04));border:1px solid rgba(157,123,255,0.2)">
+      <div class="flex items-center gap-3 mb-4">
+        <div class="w-8 h-8 rounded-full flex items-center justify-center" style="background:#6844c7">
+          <span class="material-symbols-outlined text-white text-[16px]" style="font-variation-settings:'FILL' 1">auto_awesome</span>
+        </div>
+        <span class="font-sans text-xs font-semibold tracking-widest uppercase text-primary">AI-Generated Analysis</span>
+        <div id="modal-loading" class="flex gap-1 items-center">
+          <div class="w-2 h-2 rounded-full animate-bounce" style="background:#9d7bff;animation-delay:0s"></div>
+          <div class="w-2 h-2 rounded-full animate-bounce" style="background:#9d7bff;animation-delay:.15s"></div>
+          <div class="w-2 h-2 rounded-full animate-bounce" style="background:#9d7bff;animation-delay:.3s"></div>
+        </div>
+      </div>
+      <div id="modal-ai-text" class="font-sans text-sm leading-relaxed" style="color:#1a1b22;min-height:80px"></div>
+    </div>
+
+    <!-- Key takeaways -->
+    <div id="modal-takeaways" class="space-y-3 mb-8 hidden">
+      <h4 class="font-sans text-xs font-semibold tracking-widest uppercase text-primary mb-4">Key Takeaways</h4>
+      <div id="takeaways-list" class="space-y-2"></div>
+    </div>
+
+    <!-- Footer -->
+    <div class="flex items-center justify-between pt-6 border-t" style="border-color:rgba(157,123,255,0.18)">
+      <span class="font-sans text-xs" style="color:#7a7485">Written by Hrudai Deepak</span>
+      <a href="mailto:hvd0003@gmail.com" class="btn-primary px-6 py-2.5 font-sans text-xs font-semibold tracking-widest uppercase flex items-center gap-2 shadow-lg">
+        Discuss This <span class="material-symbols-outlined text-[16px]">mail</span>
+      </a>
+    </div>
+  </div>
+</div>
+<!-- ════════════════════════════ SECRET MODAL ════════════════════════════ -->
+<div id="secret-modal" class="secret-modal" role="dialog" aria-modal="true">
+  <div class="secret-modal-content">
+    <span class="close-secret" id="close-secret">&times;</span>
+    <h3>🕵️ Secret Identity Unlocked</h3>
+    <div class="secret-img-wrapper">
+      <img src="secret.jpg" alt="Secret Photo" class="secret-img">
+    </div>
+  </div>
+</div>
+
+<!-- ════════════════════════════ SCRIPTS ════════════════════════════ -->
+<script>
+// ── Sticky nav ──
+const nav = document.getElementById('main-nav');
+window.addEventListener('scroll', () => {
+  nav.classList.toggle('slim', window.scrollY > 60);
+  nav.classList.toggle('shadow-md', window.scrollY > 60);
+});
+
+// ── Active nav highlight ──
+const secs = document.querySelectorAll('section[id]');
+const navLinks = document.querySelectorAll('.nav-link');
+const io1 = new IntersectionObserver(entries => {
+  entries.forEach(e => {
+    if(e.isIntersecting){
+      navLinks.forEach(l => { l.style.color=''; l.style.borderBottom=''; });
+      const a = document.querySelector(`.nav-link[href="#${e.target.id}"]`);
+      if(a){ a.style.color='#6844c7'; a.style.borderBottom='2px solid #6844c7'; }
+    }
+  });
+}, {threshold:.25});
+secs.forEach(s => io1.observe(s));
+
+// ── Scroll reveal ──
+const io2 = new IntersectionObserver(entries => {
+  entries.forEach(e => { if(e.isIntersecting) e.target.classList.add('visible'); });
+}, {threshold:.08});
+document.querySelectorAll('.reveal').forEach(el => io2.observe(el));
+
+// ── Progress bars ──
+const io3 = new IntersectionObserver(entries => {
+  entries.forEach(e => {
+    if(e.isIntersecting){
+      e.target.querySelectorAll('.pbar').forEach(b => { b.style.width = b.dataset.width + '%'; });
+    }
+  });
+},{threshold:.2});
+document.querySelectorAll('#stack').forEach(el => io3.observe(el));
+
+// ── Glass card mouse glow ──
+document.querySelectorAll('.glass').forEach(card => {
+  card.addEventListener('mousemove', e => {
+    const r = card.getBoundingClientRect();
+    card.style.setProperty('--mx', `${e.clientX-r.left}px`);
+    card.style.setProperty('--my', `${e.clientY-r.top}px`);
+  });
+});
+
+// ── Contact form ──
+document.getElementById('contact-form').addEventListener('submit', function(e){
+  e.preventDefault();
+  this.style.cssText = 'opacity:0;transform:translateY(-16px);transition:all .4s ease;';
+  setTimeout(()=>{
+    this.classList.add('hidden');
+    document.getElementById('form-success').classList.remove('hidden');
+  }, 420);
+});
+function resetForm(){
+  const f = document.getElementById('contact-form');
+  const s = document.getElementById('form-success');
+  s.classList.add('hidden');
+  f.classList.remove('hidden');
+  f.style.cssText = 'opacity:1;transform:none;';
+  f.reset();
+}
+
+// ════════════ INSIGHT MODAL WITH AI CONTENT ════════════
+const modal      = document.getElementById('insight-modal');
+const card       = document.getElementById('insight-card');
+const closeBtn   = document.getElementById('close-modal');
+const modalTag   = document.getElementById('modal-tag');
+const modalRead  = document.getElementById('modal-read');
+const modalTitle = document.getElementById('modal-title');
+const modalSumm  = document.getElementById('modal-summary');
+const modalLoad  = document.getElementById('modal-loading');
+const modalText  = document.getElementById('modal-ai-text');
+const takeawaysSection = document.getElementById('modal-takeaways');
+const takeawaysList    = document.getElementById('takeaways-list');
+
+// Pre-written AI insights keyed by title
+const AI_CONTENT = {
+  "Building AI-Powered Apps: Lessons from the Trenches": {
+    body: `Building with AI is fundamentally different from traditional software engineering. The model is a non-deterministic collaborator — your code orchestrates it rather than controls it.
+
+Here are the biggest lessons from shipping 8+ AI-integrated products:
+
+**1. Prompt engineering is your new algorithm.** The quality of your output is determined 80% by how well you structure your prompt. Invest heavily in system prompts, few-shot examples, and output format constraints.
+
+**2. Cost spirals kill projects.** Gemini Flash vs Pro can be a 10x cost difference. Profile your usage early: cache common queries, batch where possible, and stream responses to improve perceived performance.
+
+**3. Real users break your prompts immediately.** Everything that works in testing fails in production. Build robust fallback chains — if the AI response fails validation, retry with a stricter prompt, then fall back to a static response.
+
+**4. Streaming UX is non-negotiable.** Users tolerate 2–3 seconds max before abandoning. Streaming token-by-token keeps them engaged and feels alive.
+
+**5. Hybrid architectures win.** Pure AI apps feel magical but fragile. The most robust products pair deterministic logic (rules, DB queries) with AI for the "intelligent" layer only.`,
+    takeaways: [
+      "Prompt engineering is now a core engineering skill",
+      "Profile and optimise AI API costs from day one",
+      "Always build fallback chains for AI failures",
+      "Stream responses — don't make users wait for completion",
+      "Combine deterministic logic with AI for production resilience"
+    ]
+  },
+  "Integrating Gemini API into React Apps": {
+    body: `The Gemini API is remarkably easy to integrate into React — but a few patterns make the difference between a toy demo and a production feature.
+
+**Setup in 3 minutes:**
+\`npm install @google/generative-ai\`
+
+Then initialise once at the module level (never in a render cycle):
+\`const genAI = new GoogleGenerativeAI(process.env.REACT_APP_GEMINI_KEY)\`
+
+**Streaming hook pattern:**
+Create a \`useGeminiStream\` hook that manages loading, error, and accumulated text states. This gives every component the same clean interface.
+
+**Key production tips:**
+- Always validate and sanitise AI output before rendering — treat it like user input
+- Use \`response.text()\` for simple use cases, but parse JSON responses with try/catch
+- Keep your API key **server-side only**. Never expose it in the browser bundle
+- Implement rate limiting on your backend before forwarding to Gemini
+- Cache identical prompts using Redis or localStorage for 5–10 minutes`,
+    takeaways: [
+      "Initialise the client once, not in every render",
+      "Build a custom hook for clean streaming state management",
+      "Never expose API keys in client-side code",
+      "Validate and sanitise all AI output before rendering",
+      "Cache repeated prompts to reduce cost and latency"
+    ]
+  },
+  "Real-time Apps with Socket.io & MongoDB": {
+    body: `Real-time features are deceptively simple to prototype and surprisingly hard to scale. Sync Tube taught me that the data model is everything.
+
+**Architecture decisions that shaped Sync Tube:**
+
+**MongoDB Change Streams > polling.** Instead of clients polling for updates, the server subscribes to MongoDB change streams and pushes deltas via Socket.io. This cuts database load by ~80% compared to interval polling.
+
+**Room-based namespacing.** Socket.io rooms map 1:1 to collaboration sessions. Join on connect, leave on disconnect, broadcast only within the room. Never broadcast globally.
+
+**Operational Transforms for cursors.** Live cursor positions need OT to handle concurrent edits without conflicts. Store cursor state in Redis (not MongoDB) since it's ephemeral and changes 60 times/second.
+
+**Presence with Redis TTL.** Track online users in Redis with a 5-second TTL, refreshed by heartbeat. When the key expires, the user is considered offline.
+
+**Lesson:** Don't build real-time — buy it first. Liveblocks or Yjs handles the hard parts. Build it yourself only if you need custom business logic.`,
+    takeaways: [
+      "MongoDB Change Streams eliminate the need for polling",
+      "Room-based broadcasting prevents performance bottlenecks",
+      "Use Redis for ephemeral state (cursors, presence) — not MongoDB",
+      "Operational Transforms are essential for conflict-free editing",
+      "Consider Liveblocks or Yjs before building real-time from scratch"
+    ]
+  },
+  "Why Every Developer Needs an AI Mindset": {
+    body: `The developers who will thrive in the next decade aren't the ones who resist AI — they're the ones who learn to think *with* it.
+
+**What an AI mindset actually means:**
+
+**1. Decompose problems for AI.** AI works best on well-scoped, single-responsibility tasks. If you can't write a clear English description of what you want, you can't prompt for it effectively.
+
+**2. Verify, don't trust blindly.** Treat AI output like a junior developer's PR — review everything, test edge cases, understand the reasoning. The engineer's job shifts from writing to evaluating.
+
+**3. Use AI as a thinking partner.** Stuck on an architecture decision? Explain your constraints to Gemini and ask for tradeoffs. It's like having a senior engineer available at 2am.
+
+**4. Build meta-skills.** Prompt engineering, AI system design, and cost optimisation are now valuable engineering skills, not shortcuts.
+
+**5. Focus on what AI can't do.** Empathy with users, creative product vision, ethical judgment, and domain expertise — these compound in value as AI commoditises implementation.
+
+The developers who use AI as a force multiplier will build 10x more than those who don't. The question isn't whether to adapt — it's how fast.`,
+    takeaways: [
+      "Decompose problems clearly before prompting — garbage in, garbage out",
+      "Review all AI output critically, like a code review",
+      "AI is a thinking partner, not just a code generator",
+      "Prompt engineering and AI system design are real engineering skills",
+      "Human judgment and product vision become *more* valuable, not less"
+    ]
+  },
+  "From Idea to Deployed: The Wardrobe AI Story": {
+    body: `Wardrobe AI started as a hackathon idea: what if your phone could look at your wardrobe and suggest outfits based on weather, occasion, and personal style?
+
+**Phase 1 — Validation (Week 1):**
+Before writing a line of code, I asked 20 people: "Would you use this?" 15 said yes. Then I asked them to open their wardrobe and describe it — that's when I realised the UI had to be *effortless* or people wouldn't bother cataloguing their clothes.
+
+**Phase 2 — Tech choices:**
+- **Flutter** for cross-platform mobile (single codebase for iOS + Android)
+- **Python FastAPI** backend for the vision pipeline
+- **Gemini Vision** for garment classification and colour analysis
+- **SQLite locally** + **Supabase** for cross-device sync
+
+**The hardest problem — lighting:**
+Fashion photos taken in different lighting look wildly different. A white shirt under warm light reads as cream. Solved with histogram normalisation before sending to the model.
+
+**Lesson on scope:**
+V1 launched with just outfit suggestions. No social features, no e-commerce, no wardrobe analytics — even though all were planned. That restraint is why it shipped in 6 weeks.
+
+**Results:**
+50+ active users in week 1, 90% retention at day 7, NPS of 62.`,
+    takeaways: [
+      "Validate with real conversations before writing any code",
+      "Flutter + Python is a powerful stack for AI mobile apps",
+      "Lighting and image normalisation are critical for vision AI",
+      "Ruthless scope reduction is why products actually ship",
+      "90% day-7 retention proves: solve one problem perfectly"
+    ]
+  }
+};
+
+// Open modal
+function openInsight(articleEl) {
+  const title   = articleEl.dataset.title;
+  const tag     = articleEl.dataset.tag;
+  const read    = articleEl.dataset.read + ' read';
+  const summary = articleEl.dataset.summary;
+
+  modalTag.textContent   = tag;
+  modalRead.textContent  = read;
+  modalTitle.textContent = title;
+  modalSumm.textContent  = summary;
+  modalText.textContent  = '';
+  takeawaysSection.classList.add('hidden');
+  takeawaysList.innerHTML = '';
+  modalLoad.style.display = 'flex';
+
+  modal.classList.add('open');
+  document.body.style.overflow = 'hidden';
+  card.scrollTop = 0;
+
+  // Simulate AI typing effect
+  const content = AI_CONTENT[title];
+  if(content) {
+    setTimeout(() => {
+      modalLoad.style.display = 'none';
+      typeText(content.body, modalText, () => {
+        // After typing, show takeaways
+        if(content.takeaways && content.takeaways.length) {
+          takeawaysSection.classList.remove('hidden');
+          content.takeaways.forEach((t, i) => {
+            setTimeout(() => {
+              const div = document.createElement('div');
+              div.className = 'flex items-start gap-3 rounded-lg px-4 py-3';
+              div.style.cssText = 'background:rgba(232,221,255,0.4);border:1px solid rgba(157,123,255,0.2);';
+              div.innerHTML = `<span class="material-symbols-outlined text-primary text-[18px] mt-0.5" style="font-variation-settings:'FILL' 1;min-width:18px">check_circle</span><span class="font-sans text-sm" style="color:#1a1b22">${t}</span>`;
+              takeawaysList.appendChild(div);
+            }, i * 120);
+          });
+        }
+      });
+    }, 600);
+  }
+}
+
+// Typing animation with markdown-style bold
+function typeText(text, el, onDone) {
+  // Convert **bold** to <strong>
+  const html = text.replace(/\*\*(.*?)\*\*/g, '<strong style="color:#6844c7;font-weight:600">$1</strong>').replace(/\n/g,'<br/>');
+  el.innerHTML = '';
+  // Use chunk-reveal for speed
+  const chunks = text.split('');
+  let i = 0;
+  const speed = 8; // ms per char
+  function step(){
+    if(i < chunks.length){
+      i += Math.min(4, chunks.length - i); // reveal 4 chars at a time for speed
+      el.innerHTML = text.slice(0,i).replace(/\*\*(.*?)\*\*/g,'<strong style="color:#6844c7;font-weight:600">$1</strong>').replace(/\n/g,'<br/>') + '<span class="cursor"></span>';
+      setTimeout(step, speed);
+    } else {
+      el.innerHTML = html;
+      if(onDone) onDone();
+    }
+  }
+  step();
+}
+
+// Attach open insight to all insight cards
+document.querySelectorAll('.insight-card, .open-insight').forEach(el => {
+  el.addEventListener('click', function(e){
+    // Find the article element
+    const article = this.closest('.insight-card') || this.closest('article');
+    if(article) openInsight(article);
+  });
+});
+
+// Close modal
+function closeInsight(){
+  modal.classList.remove('open');
+  document.body.style.overflow = '';
+}
+closeBtn.addEventListener('click', closeInsight);
+modal.addEventListener('click', e => { if(e.target === modal) closeInsight(); });
+document.addEventListener('keydown', e => { if(e.key === 'Escape') closeInsight(); });
+
+  // Contact form
+  document.getElementById('contact-form').addEventListener('submit', function(e){
+    e.preventDefault();
+    this.style.cssText='opacity:0;transform:translateY(-16px);transition:all .4s ease;';
+    setTimeout(()=>{
+      this.classList.add('hidden');
+      document.getElementById('form-success').classList.remove('hidden');
+    },420);
+  });
+
+  // ── Easter Egg: Secret Identity Trigger ──
+  let clickCount = 0;
+  let clickTimeout;
+  let keysPressed = '';
+  const secretModal = document.getElementById('secret-modal');
+  const closeSecret = document.getElementById('close-secret');
+  
+  // Find navbar name and footer name
+  const triggers = [
+    Array.from(document.querySelectorAll('nav a')).find(el => el.textContent.trim() === 'Hrudai Deepak'),
+    Array.from(document.querySelectorAll('footer div')).find(el => el.textContent.trim() === 'Hrudai Deepak')
+  ].filter(Boolean);
+
+  if (secretModal && triggers.length > 0) {
+    triggers.forEach(trigger => {
+      trigger.addEventListener('click', () => {
+        clickCount++;
+        if (clickCount >= 5) {
+          secretModal.classList.add('open');
+          clickCount = 0;
+        }
+        clearTimeout(clickTimeout);
+        clickTimeout = setTimeout(() => { clickCount = 0; }, 3000);
+      });
+    });
+  }
+
+  // Keypress trigger "spiderman"
+  document.addEventListener('keydown', (e) => {
+    const activeEl = document.activeElement;
+    if (activeEl && (activeEl.tagName === 'INPUT' || activeEl.tagName === 'TEXTAREA')) {
+      return;
+    }
+    keysPressed += e.key.toLowerCase();
+    if (keysPressed.includes('spiderman')) {
+      if (secretModal) {
+        secretModal.classList.add('open');
+      }
+      keysPressed = '';
+    }
+    if (keysPressed.length > 20) {
+      keysPressed = keysPressed.substring(keysPressed.length - 15);
+    }
+  });
+
+  if (closeSecret && secretModal) {
+    closeSecret.addEventListener('click', () => {
+      secretModal.classList.remove('open');
+    });
+    secretModal.addEventListener('click', (e) => {
+      if (e.target === secretModal) {
+        secretModal.classList.remove('open');
+      }
+    });
+  }
+</script>
+</body>
+</html>

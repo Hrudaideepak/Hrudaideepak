@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>Bonagiri Naga Venkata Hrudai Deepak — Resume</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+  :root {
+    --primary: #6844c7;
+    --primary-light: #e8ddff;
+    --text: #1a1b22;
+    --text-muted: #494553;
+    --border: #cbc3d5;
+    --bg: #ffffff;
+    --accent-bg: #f4f2fd;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    font-family: 'Inter', Arial, sans-serif;
+    font-size: 10.5pt;
+    color: var(--text);
+    background: var(--bg);
+    line-height: 1.45;
+    max-width: 860px;
+    margin: 0 auto;
+    padding: 32px 40px;
+  }
+
+  /* ── HEADER ── */
+  .header { text-align: center; margin-bottom: 20px; border-bottom: 2px solid var(--primary); padding-bottom: 16px; }
+  .header h1 { font-size: 22pt; font-weight: 700; color: var(--primary); letter-spacing: -0.02em; margin-bottom: 4px; }
+  .header .title { font-size: 10pt; font-weight: 500; color: var(--text-muted); letter-spacing: 0.06em; text-transform: uppercase; margin-bottom: 10px; }
+  .contact-row { display: flex; flex-wrap: wrap; justify-content: center; gap: 8px 20px; font-size: 9.5pt; color: var(--text-muted); }
+  .contact-row a { color: var(--primary); text-decoration: none; }
+  .contact-row a:hover { text-decoration: underline; }
+  .contact-sep::before { content: '·'; margin-right: 20px; color: var(--border); }
+
+  /* ── SECTIONS ── */
+  .section { margin-bottom: 18px; }
+  .section-title {
+    font-size: 9.5pt; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase;
+    color: var(--primary); border-bottom: 1px solid var(--border);
+    padding-bottom: 3px; margin-bottom: 10px;
+  }
+
+  /* ── SUMMARY ── */
+  .summary { font-size: 10pt; color: var(--text-muted); line-height: 1.6; }
+
+  /* ── SKILLS ── */
+  .skills-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 5px 24px; }
+  .skill-row { display: flex; align-items: baseline; gap: 6px; font-size: 9.5pt; }
+  .skill-label { font-weight: 600; color: var(--text); min-width: 155px; flex-shrink: 0; }
+  .skill-values { color: var(--text-muted); }
+
+  /* ── EXPERIENCE / PROJECT ── */
+  .entry { margin-bottom: 14px; }
+  .entry-header { display: flex; justify-content: space-between; align-items: baseline; gap: 8px; }
+  .entry-title { font-weight: 700; font-size: 10.5pt; color: var(--text); }
+  .entry-title a { color: var(--primary); text-decoration: none; }
+  .entry-title a:hover { text-decoration: underline; }
+  .entry-meta { font-size: 9pt; color: var(--text-muted); white-space: nowrap; }
+  .entry-sub { font-size: 9.5pt; font-style: italic; color: var(--text-muted); margin: 2px 0 5px; }
+  .tech-tags { display: flex; flex-wrap: wrap; gap: 4px; margin: 4px 0 6px; }
+  .tech-tag {
+    background: var(--primary-light); color: var(--primary);
+    font-size: 8pt; font-weight: 600; padding: 1px 7px; border-radius: 9999px;
+    letter-spacing: 0.04em;
+  }
+  .bullet-list { padding-left: 14px; }
+  .bullet-list li { margin-bottom: 3px; font-size: 9.5pt; color: var(--text-muted); line-height: 1.5; }
+
+  /* ── EDUCATION ── */
+  .edu-entry { margin-bottom: 8px; }
+  .edu-header { display: flex; justify-content: space-between; }
+  .edu-degree { font-weight: 600; font-size: 10pt; }
+  .edu-inst { font-size: 9.5pt; color: var(--text-muted); }
+  .edu-date { font-size: 9pt; color: var(--text-muted); }
+
+  /* ── CERTS ── */
+  .cert-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 6px 24px; }
+  .cert-item { display: flex; align-items: baseline; gap: 6px; }
+  .cert-dot { color: var(--primary); font-size: 12pt; line-height: 1; flex-shrink: 0; }
+  .cert-text { font-size: 9.5pt; color: var(--text-muted); }
+  .cert-text strong { color: var(--text); font-weight: 600; }
+
+  /* ── ACHIEVEMENTS ── */
+  .ach-list { list-style: none; }
+  .ach-list li { display: flex; gap: 8px; align-items: baseline; margin-bottom: 4px; font-size: 9.5pt; color: var(--text-muted); }
+  .ach-list li::before { content: '▸'; color: var(--primary); flex-shrink: 0; }
+
+  /* ── PRINT ── */
+  @media print {
+    body { padding: 20px 28px; font-size: 9.5pt; }
+    .header h1 { font-size: 18pt; }
+    .section { margin-bottom: 14px; }
+    a { color: var(--primary) !important; }
+  }
+
+  @page { margin: 16mm 14mm; }
+</style>
+</head>
+<body>
+
+<!-- ══ HEADER ══ -->
+<div class="header">
+  <h1>BONAGIRI NAGA VENKATA HRUDAI DEEPAK</h1>
+  <div class="title">AI/ML Engineer &nbsp;·&nbsp; Full-Stack Developer &nbsp;·&nbsp; Generative AI Specialist</div>
+  <div class="contact-row">
+    <span>+91 9849675783</span>
+    <span>Hyderabad, India</span>
+    <a href="mailto:hvd0003@gmail.com">hvd0003@gmail.com</a>
+    <a href="https://linkedin.com/in/hrudai-deepak-bonagiri" target="_blank">linkedin.com/in/hrudai-deepak-bonagiri</a>
+    <a href="https://github.com/Hrudaideepak" target="_blank">github.com/Hrudaideepak</a>
+  </div>
+</div>
+
+<!-- ══ SUMMARY ══ -->
+<div class="section">
+  <div class="section-title">Professional Summary</div>
+  <p class="summary">
+    Computer Science undergraduate specialising in AI/ML at Annamacharya Institute of Technology &amp; Sciences, with hands-on experience building and deploying production-grade AI systems. Skilled in architecting Retrieval-Augmented Generation (RAG) pipelines, LLM orchestration (Gemini 1.5, GPT-4o), automated data pipelines, and real-time performance monitoring dashboards. Proven ability to track model output accuracy, validate data integrity, and fine-tune AI system parameters. Google Cloud Data Fundamentals certified. Active open-source contributor with a diverse portfolio of AI, full-stack, and data engineering projects.
+  </p>
+</div>
+
+<!-- ══ SKILLS ══ -->
+<div class="section">
+  <div class="section-title">Core Competencies</div>
+  <div class="skills-grid">
+    <div class="skill-row">
+      <span class="skill-label">AI/ML &amp; LLM:</span>
+      <span class="skill-values">RAG Pipelines, LangChain, Gemini 1.5, GPT-4o, Prompt Engineering, Vector DBs (ChromaDB), Scikit-Learn</span>
+    </div>
+    <div class="skill-row">
+      <span class="skill-label">Frontend:</span>
+      <span class="skill-values">React.js, Next.js, TypeScript, JavaScript (ES6+), HTML5/CSS3, Flutter (Dart)</span>
+    </div>
+    <div class="skill-row">
+      <span class="skill-label">Backend &amp; APIs:</span>
+      <span class="skill-values">Python, Node.js, FastAPI, REST APIs, PostgreSQL, MongoDB, Firebase, Supabase</span>
+    </div>
+    <div class="skill-row">
+      <span class="skill-label">Data &amp; Pipelines:</span>
+      <span class="skill-values">Automated Data Collection, Data Validation, EDA, Pandas, NumPy, Web Scraping, SQL, JSON DBs</span>
+    </div>
+    <div class="skill-row">
+      <span class="skill-label">DevOps &amp; Cloud:</span>
+      <span class="skill-values">Git/GitHub, GitHub Actions CI/CD, Vercel, Firebase Hosting, Docker, Google Cloud Platform</span>
+    </div>
+    <div class="skill-row">
+      <span class="skill-label">Visualisation:</span>
+      <span class="skill-values">Power BI, Tableau, Streamlit, Matplotlib, Seaborn</span>
+    </div>
+  </div>
+</div>
+
+<!-- ══ GITHUB PROJECTS ══ -->
+<div class="section">
+  <div class="section-title">Technical Projects <span style="font-weight:400;font-size:8.5pt;color:#7a7485">(GitHub: github.com/Hrudaideepak)</span></div>
+
+  <!-- AI Career Mentor -->
+  <div class="entry">
+    <div class="entry-header">
+      <span class="entry-title"><a href="https://github.com/Hrudaideepak/-AI-Career-Mentor---Your-Personal-Career-Guidance-Platform--gemini" target="_blank">AI Career Mentor — RAG + LLM Guidance Platform</a></span>
+      <span class="entry-meta">2024–2025 · Personal Project</span>
+    </div>
+    <div class="entry-sub">Python · FastAPI · LangChain · ChromaDB · Gemini 1.5 · GPT-4o · PostgreSQL · Streamlit</div>
+    <div class="tech-tags">
+      <span class="tech-tag">RAG Pipeline</span><span class="tech-tag">LangChain</span><span class="tech-tag">Gemini API</span><span class="tech-tag">FastAPI</span><span class="tech-tag">PostgreSQL</span><span class="tech-tag">Vector DB</span>
+    </div>
+    <ul class="bullet-list">
+      <li>Designed an end-to-end RAG pipeline integrating ChromaDB vector storage with real-time LLM response generation, enabling sub-second context-aware retrieval using semantic vector embeddings.</li>
+      <li>Built skill-gap analytics logic that generates personalised career roadmaps, tracking user performance data and measuring output accuracy across sessions with dual-LLM support (GPT-4o + Gemini 1.5).</li>
+      <li>Engineered a FastAPI backend managing 8+ relational tables in PostgreSQL with Bcrypt authentication and secure session management ensuring continuous data integrity.</li>
+      <li>Implemented real-time monitoring dashboards for LLM response quality comparison and AI system performance metrics.</li>
+    </ul>
+  </div>
+
+  <!-- Vanix -->
+  <div class="entry">
+    <div class="entry-header">
+      <span class="entry-title"><a href="https://github.com/Hrudaideepak/vanix" target="_blank">Vanix — AI-Powered Cinema &amp; Streaming App</a></span>
+      <span class="entry-meta">2026 · Personal Project</span>
+    </div>
+    <div class="entry-sub">Flutter (Dart) · Python Backend · Gemini API · Firebase · REST APIs</div>
+    <div class="tech-tags">
+      <span class="tech-tag">Flutter</span><span class="tech-tag">Dart</span><span class="tech-tag">Gemini API</span><span class="tech-tag">Firebase</span><span class="tech-tag">AI Features</span>
+    </div>
+    <ul class="bullet-list">
+      <li>Built a cross-platform Flutter app for AI-enhanced cinema browsing, integrating Gemini API for smart movie recommendations and scene analysis.</li>
+      <li>Implemented Firebase authentication, real-time Firestore sync, and a Python backend for content processing and AI enrichment pipelines.</li>
+      <li>Architected a modular, production-ready codebase with 4+ open issues actively tracked for continuous improvement.</li>
+    </ul>
+  </div>
+
+  <!-- IQ Island -->
+  <div class="entry">
+    <div class="entry-header">
+      <span class="entry-title"><a href="https://github.com/Hrudaideepak/IQisland" target="_blank">IQ Island — Adaptive AI Quiz &amp; Learning Platform</a></span>
+      <span class="entry-meta">2026 · Personal Project</span>
+    </div>
+    <div class="entry-sub">Python · Gemini API · React.js · Firebase · Adaptive Algorithms</div>
+    <div class="tech-tags">
+      <span class="tech-tag">Python</span><span class="tech-tag">Gemini API</span><span class="tech-tag">React</span><span class="tech-tag">Adaptive AI</span><span class="tech-tag">Firebase</span>
+    </div>
+    <ul class="bullet-list">
+      <li>Developed an AI-powered quiz platform using Gemini API to generate adaptive, context-aware questions dynamically based on user knowledge level and topic selection.</li>
+      <li>Built a scoring engine and performance tracker providing personalised learning roadmaps and real-time difficulty scaling.</li>
+    </ul>
+  </div>
+
+  <!-- Sync Tube -->
+  <div class="entry">
+    <div class="entry-header">
+      <span class="entry-title"><a href="https://github.com/Hrudaideepak/sync-tube" target="_blank">Sync Tube — Real-Time Synchronized Video Player</a></span>
+      <span class="entry-meta">2026 · Personal Project</span>
+    </div>
+    <div class="entry-sub">JavaScript · Node.js · React.js · Socket.io · CSS3</div>
+    <div class="tech-tags">
+      <span class="tech-tag">JavaScript</span><span class="tech-tag">Node.js</span><span class="tech-tag">React</span><span class="tech-tag">Socket.io</span><span class="tech-tag">Real-Time</span>
+    </div>
+    <ul class="bullet-list">
+      <li>Built a real-time collaborative video streaming platform allowing multiple users to synchronize video playback, featuring virtual rooms and low-latency state synchronization.</li>
+      <li>Implemented dynamic room-based namespacing and state management utilizing Socket.io and Node.js backend to prevent broadcast bottlenecks.</li>
+    </ul>
+  </div>
+
+  <!-- Roast My Code -->
+  <div class="entry">
+    <div class="entry-header">
+      <span class="entry-title">Roast My Code — LLM Prompt Engineering &amp; GitHub Analytics</span>
+      <span class="entry-meta">2024 · Personal Project</span>
+    </div>
+    <div class="entry-sub">TypeScript · GitHub REST API · Gemini 1.5 · Vercel</div>
+    <div class="tech-tags">
+      <span class="tech-tag">TypeScript</span><span class="tech-tag">GitHub API</span><span class="tech-tag">Gemini 1.5</span><span class="tech-tag">Prompt Engineering</span><span class="tech-tag">Vercel</span>
+    </div>
+    <ul class="bullet-list">
+      <li>Used the GitHub REST API to extract and preprocess repository structures, commit patterns, and language distributions for LLM analysis by Gemini 1.5.</li>
+      <li>Designed sophisticated system prompts enabling personality-driven, automated code-quality feedback deployed on Vercel with optimised TypeScript frontend for low-latency delivery.</li>
+    </ul>
+  </div>
+
+  <!-- Quote Generator -->
+  <div class="entry">
+    <div class="entry-header">
+      <span class="entry-title"><a href="https://github.com/Hrudaideepak/random_asthetic_Quote_generator" target="_blank">Aesthetic Quote Generator — Live Web App</a></span>
+      <span class="entry-meta">2026 · Personal Project</span>
+    </div>
+    <div class="entry-sub">JavaScript · HTML/CSS · GitHub Pages</div>
+    <div class="tech-tags">
+      <span class="tech-tag">JavaScript</span><span class="tech-tag">GitHub Pages</span><span class="tech-tag">Live Deploy</span>
+    </div>
+    <ul class="bullet-list">
+      <li>Built and deployed a live aesthetically-designed random quote generator using vanilla JavaScript with GitHub Pages hosting, demonstrating clean frontend engineering and rapid deployment.</li>
+    </ul>
+  </div>
+</div>
+
+<!-- ══ EDUCATION ══ -->
+<div class="section">
+  <div class="section-title">Education</div>
+
+  <div class="edu-entry">
+    <div class="edu-header">
+      <div>
+        <div class="edu-degree">B.Tech in Computer Science — AI &amp; Machine Learning</div>
+        <div class="edu-inst">Annamacharya Institute of Technology &amp; Sciences (AITS), Hyderabad &nbsp;·&nbsp; Top Percentile Academic Standing</div>
+        <div class="edu-inst" style="margin-top:2px">Relevant Coursework: Neural Networks, NLP, Data Structures &amp; Algorithms, Advanced DBMS, Mathematical Foundations for AI</div>
+      </div>
+      <div class="edu-date">2023 – 2027 (Expected)</div>
+    </div>
+  </div>
+
+  <div class="edu-entry">
+    <div class="edu-header">
+      <div>
+        <div class="edu-degree">Intermediate (MPC) — 94%</div>
+        <div class="edu-inst">Narayana Junior College, Raviryala</div>
+      </div>
+      <div class="edu-date">2021</div>
+    </div>
+  </div>
+
+  <div class="edu-entry">
+    <div class="edu-header">
+      <div>
+        <div class="edu-degree">Secondary School Certificate (SSC) — 97%</div>
+        <div class="edu-inst">Creative High School, Khammam</div>
+      </div>
+      <div class="edu-date">2019</div>
+    </div>
+  </div>
+</div>
+
+<!-- ══ CERTIFICATIONS ══ -->
+<div class="section">
+  <div class="section-title">Certifications &amp; Credentials <span style="font-weight:400;font-size:8.5pt;color:#7a7485">(Full list: linkedin.com/in/hrudai-deepak-bonagiri)</span></div>
+  <div class="cert-grid">
+    <div class="cert-item">
+      <span class="cert-dot">▸</span>
+      <span class="cert-text"><strong>Google Cloud Data Fundamentals</strong> — Professional Assessment, Score: 80%</span>
+    </div>
+    <div class="cert-item">
+      <span class="cert-dot">▸</span>
+      <span class="cert-text"><strong>Generative AI &amp; Prompt Engineering Workshop</strong> — Industry ML Model Applications</span>
+    </div>
+    <div class="cert-item">
+      <span class="cert-dot">▸</span>
+      <span class="cert-text"><strong>Full-Stack Web Development Certification</strong> — HTML, CSS, JavaScript, Python</span>
+    </div>
+    <div class="cert-item">
+      <span class="cert-dot">▸</span>
+      <span class="cert-text"><strong>AI/ML Fundamentals</strong> — Machine Learning Algorithms &amp; Neural Networks</span>
+    </div>
+    <div class="cert-item">
+      <span class="cert-dot">▸</span>
+      <span class="cert-text"><strong>Python for Data Science</strong> — Pandas, NumPy, Scikit-Learn, Matplotlib</span>
+    </div>
+    <div class="cert-item">
+      <span class="cert-dot">▸</span>
+      <span class="cert-text"><strong>Firebase &amp; Google Cloud</strong> — Firebase Auth, Firestore, GCP Infrastructure</span>
+    </div>
+  </div>
+</div>
+
+<!-- ══ ACHIEVEMENTS ══ -->
+<div class="section">
+  <div class="section-title">Achievements &amp; Activities</div>
+  <ul class="ach-list">
+    <li><strong>Hacksphere 2.0</strong> (BITS Pilani Hyderabad Campus) — Built software prototypes under tight constraints at ATMOS'25 national hackathon</li>
+    <li><strong>Code4EdTech Hackathon</strong> — Engineered innovative software solutions for educational challenges in collaborative team sprint</li>
+    <li><strong>Active Open-Source Contributor</strong> on GitHub — RAG systems, LLM orchestration, web automation, AI product development</li>
+    <li><strong>High Academic Standing:</strong> 97% SSC (2019), 94% Intermediate (2021), Top Percentile B.Tech</li>
+    <li><strong>Runner-up</strong> — College Showdown Singing Competition (communication confidence &amp; interpersonal skills)</li>
+  </ul>
+</div>
+
+<!-- ══ FOOTER ══ -->
+<div style="margin-top:20px;padding-top:10px;border-top:1px solid var(--border);text-align:center;font-size:8pt;color:#7a7485">
+  Portfolio: <a href="https://hrudaideepak.github.io/Naruto" style="color:#6844c7">hrudaideepak.github.io/Naruto</a>
+  &nbsp;·&nbsp; LinkedIn: <a href="https://linkedin.com/in/hrudai-deepak-bonagiri" style="color:#6844c7">linkedin.com/in/hrudai-deepak-bonagiri</a>
+  &nbsp;·&nbsp; GitHub: <a href="https://github.com/Hrudaideepak" style="color:#6844c7">github.com/Hrudaideepak</a>
+</div>
+
+</body>
+</html>
