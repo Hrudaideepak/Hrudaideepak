@@ -1,5 +1,7 @@
 # 🌌 Welcome to Hrudaideepak's GitHub Profile!
 
+### 🚀 Check out my Portfolio Website: [Hrudaideepak's Portfolio](https://hrudai-portfolio-6a08a.web.app/#hero)
+
 <div align="center">
   <img src="https://readme-typing-svg.demolab.com?font=Orbitron&weight=700&size=28&pause=1000&color=E21227&center=true&vCenter=true&width=600&lines=Hi+there!+I'm+Deepak;Full+Stack+%26+Mobile+Engineer;AI+Integrations+Specialist;Building+Premium+Experiences" alt="Typing SVG" />
 </div>
