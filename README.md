@@ -1,4 +1,4 @@
-# 🌀 Welcome to Hrudaideepak's GitHub Profile!
+# 🌌 Welcome to Hrudaideepak's GitHub Profile!
 
 ### 🚀 Check out my Portfolio Website: [Hrudaideepak's Portfolio](https://hrudai-portfolio-6a08a.web.app/#hero)
 
@@ -14,15 +14,15 @@
 
 ---
 
-## ��️ Technologies & Tools
+## 🛠️ Technologies & Tools
 
 I build scalable, modern applications across mobile, web, and backend architectures:
 
 <table>
   <tr>
     <td valign="top" width="50%">
-      <h3>�1 Mobile & Frontend</h3>
-      <img src="https://img.shields.io/badge/Flutter-02569B?style=for-the-badge&logo=flutter&logoColor=white" alt=&Flutter" />
+      <h3>📱 Mobile & Frontend</h3>
+      <img src="https://img.shields.io/badge/Flutter-02569B?style=for-the-badge&logo=flutter&logoColor=white" alt="Flutter" />
       <img src="https://img.shields.io/badge/Dart-0175C2?style=for-the-badge&logo=dart&logoColor=white" alt="Dart" />
       <img src="https://img.shields.io/badge/Next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white" alt="Next.js" />
       <img src="https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB" alt="React" />
@@ -45,26 +45,26 @@ I build scalable, modern applications across mobile, web, and backend architectu
 ## 🤖 Featured AI & Data Platforms
 
 ### ⚡ [OpenForge Studio (OFS)](https://github.com/Hrudaideepak/ofs)
-An advanced Agentic RAG Text-to-SRL platform integrated with Firebase authentication. Translates natural language into database queries dynamically.
+An advanced Agentic RAG Text-to-SQL platform integrated with Firebase authentication. Translates natural language into database queries dynamically.
 * **Tech Stack:** Python, RAG Architecture, Text-to-SQL, Firebase, LLM Workflows.
 
-### 🇡 [ChurnGuard](https://github.com/Hrudaideepak/-churnguard-) º [![Live Demo](https://img.shields.io/badge/Live_App-Streamlit-FF4B4B?style=flat-square&logo=streamlit&logoColor=white)](https://churnguard2.streamlit.app/)
+### 🛡️ [ChurnGuard](https://github.com/Hrudaideepak/-churnguard-) · [![Live Demo](https://img.shields.io/badge/Live_App-Streamlit-FF4B4B?style=flat-square&logo=streamlit&logoColor=white)](https://churnguard2.streamlit.app/)
 An AI-powered customer churn prediction platform that identifies high-risk customers and suggests automated retention actions.
 * **Tech Stack:** Python, Machine Learning, Streamlit.
 
 ### ⚡ [Codempress](https://github.com/Hrudaideepak/codempress) · [![Live Demo](https://img.shields.io/badge/Live_App-Vercel-000000?style=flat-square&logo=vercel&logoColor=white)](https://codempress.vercel.app)
 A sleek web platform designed to streamline developer workflows and code compression/optimization.
-* *(Tech Stack:** Python, Web Engineering.
+* **Tech Stack:** Python, Web Engineering.
 
 ### 🎯 [Customer Feedback Prioritizer](https://github.com/Hrudaideepak/customer-feedback-prioritizer)
 An intelligent TypeScript utility that analyzes, categorizes, and prioritizes user feedback and feature requests automatically.
-* *(Tech Stack:** TypeScript, AI Feedback Parsing.
+* **Tech Stack:** TypeScript, AI Feedback Parsing.
 
-### � [AI Career Mentor](https://github.com/Hrudaideepak/-AI-Career-Mentor---Your-Personal-Career-Guidance-Platform--openai) (Available in [OpenAI](https://github.com/Hrudaideepak/-AI-Career-Mentor---Your-Personal-Career-Guidance-Platform--openai) & [Gemini](https://github.com/Hrudaideepak/-AI-Career-Mentor---Your-Personal-Career-Guidance-Platform--gemini) Engines)
+### 🧠 [AI Career Mentor](https://github.com/Hrudaideepak/-AI-Career-Mentor---Your-Personal-Career-Guidance-Platform--openai) (Available in [OpenAI](https://github.com/Hrudaideepak/-AI-Career-Mentor---Your-Personal-Career-Guidance-Platform--openai) & [Gemini](https://github.com/Hrudaideepak/-AI-Career-Mentor---Your-Personal-Career-Guidance-Platform--gemini) Engines)
 Full-stack career assistant with persistent session memory providing tailored guidance based on user resumes, career history, and interactive conversations.
-* *(Tech Stack:** Python, LangChain, LLM APIs.
+* **Tech Stack:** Python, LangChain, LLM APIs.
 
-### 🥑 [Roast My Code](https://github.com/Hrudaideepak/Roast_my_code)
+### 🔥 [Roast My Code](https://github.com/Hrudaideepak/Roast_my_code)
 A developer utility that reviews code repositories and generates humorous critiques and actionable code refactoring suggestions using LLMs.
 * **Tech Stack:** TypeScript, Node.js, AI API Integration.
 
@@ -72,7 +72,7 @@ A developer utility that reviews code repositories and generates humorous critiq
 
 ## 📱 Mobile & Application Engineering
 
-### �1 [Vanix](https://github.com/Hrudaideepak/vanix)
+### 📱 [Vanix](https://github.com/Hrudaideepak/vanix)
 Cross-platform mobile application engineered with Flutter & Dart for seamless performance and modern interface design.
 * **Tech Stack:** Flutter, Dart.
 
@@ -84,17 +84,17 @@ A smart closet organizer helper designed to catalog clothing and suggest outfit 
 
 ## ✨ Creative & Web Projects
 
-### 🍭 [Squishy Jelly](https://github.com/Hrudaideepak/squishyjelly)
-An interoactive physics-based stress relief jelly toy running directly in the browser to help you unwind.
+### 🍮 [Squishy Jelly](https://github.com/Hrudaideepak/squishyjelly)
+An interactive physics-based stress relief jelly toy running directly in the browser to help you unwind.
 * **Tech Stack:** HTML5, Canvas, JavaScript Physics.
 
-### 💫 [Random Aesthetic Quote Generator](https://github.com/Hrudaideepak/random_aesthetic_Quote_generator)
-A clean, visually pleasing web application that pairs deep quotes with curated gradient aestientics.
-* *(Tech Stack:** JavaScript, CSS.
+### 💬 [Random Aesthetic Quote Generator](https://github.com/Hrudaideepak/random_asthetic_Quote_generator)
+A clean, visually pleasing web application that pairs deep quotes with curated gradient aesthetics.
+* **Tech Stack:** JavaScript, CSS.
 
 ---
 
-## 📢 Live GitHub Analytics
+## 📊 Live GitHub Analytics
 
 <div align="center">
   <table border="0">
@@ -120,7 +120,7 @@ A clean, visually pleasing web application that pairs deep quotes with curated g
 
 ---
 
-## �9 GitHub Trophies
+## 🏆 GitHub Trophies
 <p align="center">
   <a href="https://github.com/ryo-ma/github-profile-trophy">
     <img src="https://github-profile-trophy.vercel.app/?username=Hrudaideepak&theme=tokyonight&no-bg=true&no-frame=true&margin-w=15" alt="GitHub Trophies" />
@@ -129,10 +129,10 @@ A clean, visually pleasing web application that pairs deep quotes with curated g
 
 ---
 
-## 📢 Activity Graph
+## 📈 Activity Graph
 
 <p align="center">
-  <img src="https://github-readme-activity-graph.vercel.app/graph?username=Hrudaieepak&bg_color=0d1117&color=E21227&line=E21227&point=ffffff&area=true&hide_border=true" alt="Activity Graph" width="800" />
+  <img src="https://github-readme-activity-graph.vercel.app/graph?username=Hrudaideepak&bg_color=0d1117&color=E21227&line=E21227&point=ffffff&area=true&hide_border=true" alt="Activity Graph" width="800" />
 </p>
 
 ---
