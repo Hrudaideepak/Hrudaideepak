@@ -6,7 +6,9 @@
 
 <p align="center">
   <a href="https://github.com/Hrudaideepak"><img src="https://img.shields.io/github/followers/Hrudaideepak?label=Followers&style=for-the-badge&color=61AFEF&labelColor=21252b" alt="Followers" /></a>
-  <a href="https://hrudai-portfolio-6a08a.web.app/#hero" target="_blank"><img src="https://img.shields.io/badge/%F0%9F%8C%90_Portfolio-Live-98C379?style=for-the-badge&labelColor=21252b" alt="Portfolio" /></a>
+  <a href="https://hrudaideepak.vercel.app" target="_blank"><img src="https://img.shields.io/badge/%F0%9F%8C%90_Portfolio-Live-98C379?style=for-the-badge&labelColor=21252b" alt="Portfolio" /></a>
+  <a href="https://hrudaideepak.vercel.app/resume" target="_blank"><img src="https://img.shields.io/badge/%F0%9F%93%84_Resume-View-98C379?style=for-the-badge&labelColor=21252b" alt="Resume" /></a>
+  <a href="https://hrudaideepak.github.io/hrudai-portfolio/" target="_blank"><img src="https://img.shields.io/badge/%F0%9F%9A%80_GitHub_Pages-Mirror-98C379?style=for-the-badge&labelColor=21252b" alt="GitHub Pages" /></a>
   <a href="mailto:hvd0003@gmail.com"><img src="https://img.shields.io/badge/%E2%9C%89%EF%B8%8F_Email-Contact_Me-E06C75?style=for-the-badge&labelColor=21252b" alt="Email" /></a>
 </p>
 
